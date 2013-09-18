@@ -15,17 +15,6 @@ a:focus {
 a:hover{
 	color:#444;
 }
-#nav{
-	position:fixed;
-	bottom:0px;
-	width:100%;
-}
-#nav li {
-	font-family:"Novecento-Normal", Century Gothic, sans-serif;
-	font-size:18px;
-	float:left;
-	list-style-type:none;
-}
 #page {
 	background-image:url(../img/construction.jpg);
 	background-size: cover;
@@ -40,13 +29,13 @@ a:hover{
 #panel {
 	display:block;
 	position:relative;
-	width:40%;
+	width:48%;
 	min-width:300px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:7%;
-	height:65%;
-	min-height:500px;
+	margin-top:5%;
+	height:75%;
+	min-height:540px;
 	background-color:rgba(208, 210, 211, 0.3);
 }
 #panel p{
@@ -72,18 +61,19 @@ a:hover{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	width:32%;
+	width:35%;
 	padding-top:10%;
 }
-#statement {
-	width:55%;
+#contact {
+	width:50%;
+	border-top:1px solid #777;
+	border-bottom:1px solid #777;
 	margin-left:auto;
 	margin-right:auto;
-	line-height:24px;
 }
-#statement p{
-	font-size:18px;
+#contact p{
+	font-size:15px;
 }
-#statement p span{
+#contact p span{
 	font-family:"Univers-Light", Trebuchet, sans-serif;
 }
