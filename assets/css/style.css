@@ -50,23 +50,12 @@ a:hover{
 	background-color:rgba(208, 210, 211, 0.3);
 }
 #panel p{
-	font-family:"Univers-Regular", Trebuchet, sans-serif;
+	font-family:"Univers-Light", Trebuchet, sans-serif;
 	text-align:center;
 	font-size:20px;
 	margin-top:5px;
 	margin-bottom:5px;
 	color:#222;
-}
-#panel h2{
-	display: block;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	font-family:"Univers-Bold", Trebuchet, sans-serif; 
-	text-align:center;
-	font-weight:normal;
-	font-size:28px;
-	margin-top:5px;
-	color:#144733;
 }
 #panel img{
 	display:block;
@@ -85,5 +74,5 @@ a:hover{
 	font-size:18px;
 }
 #statement p span{
-	font-family:"Univers-Light", Trebuchet, sans-serif;
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
 }
