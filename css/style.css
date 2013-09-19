@@ -32,15 +32,15 @@ a:hover{
 	margin-top: 33px;
 	font-family:"Novecento-Normal", Century Gothic, sans-serif;
 	font-size:18px;
+	z-index: 1000;
 }
 
 .img-background {
 	background-image:url(../img/construction.jpg);
 	background-size: cover;
-	background-position: center bottom; 
+	background-position: center top; 
 	background-scroll:scroll;
-	background-attachment:fixed;
-	z-index: -1000;
+	z-index: -10;
 }
 
 .panel {
