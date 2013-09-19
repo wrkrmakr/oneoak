@@ -40,12 +40,14 @@ a:hover{
 	background-position: center bottom; 
 	background-scroll:scroll;
 	background-attachment:fixed;
+	z-index: -1000;
 }
 
 .panel {
 	background-color:rgba(208, 210, 211, 0.5);
 	text-align:center;
 	padding: 70px 60px 35px;
+	z-index: 1000;
 }
 
 .panel p{
@@ -55,6 +57,7 @@ a:hover{
 /*	margin-top:5px;
 	margin-bottom:5px;*/
 	color:#222;
+	z-index: 1000;
 }
 
 .panel p .bold{
