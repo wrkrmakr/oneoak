@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+/*	margin:0px;
+	padding:0px;*/
+}
+a,
+a:link,
+a:visited,
+a:focus {
+	color: #222;
+	text-decoration: none;
+	outline:none;
+}
+a:hover{
+	color:#444;
+}
+
+/*Palette*/
+/* Dark green: #144733 */
+/* Medium green: #5e7260 */
+/* Light green: #b2bcaf */
+/* Grey: #d0d2d3 */
+/* Try Unsemantic grid system? http://unsemantic.com/ */
+
+.nav-btn {
+	background-color: #d0d2d3;
+	height: 38px;
+	text-align: center;
+	color: #144733;
+	padding-top: 13px;
+	margin-top: 33px;
+	font-family:"Novecento-Normal", Century Gothic, sans-serif;
+	font-size:18px;
+}
+
+.img-background {
+	background-image:url(../img/construction.jpg);
+	background-size: cover;
+	background-position: center bottom; 
+	background-scroll:scroll;
+	background-attachment:fixed;
+}
+
+.panel {
+	background-color:rgba(208, 210, 211, 0.5);
+	text-align:center;
+	padding: 70px 60px 35px;
+}
+
+.panel p{
+	font-family:"Univers-Light", Trebuchet, sans-serif;
+	text-align:center;
+	font-size:18px;
+/*	margin-top:5px;
+	margin-bottom:5px;*/
+	color:#222;
+}
+
+.panel p .bold{
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
+}
+
+.panel .center-image {
+	text-align:center;
+}
