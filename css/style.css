@@ -23,7 +23,7 @@ a:hover{
 /* Grey: #d0d2d3 */
 /* Try Unsemantic grid system? http://unsemantic.com/ */
 
-.nav_btn_vision {
+.nav-btn-vision {
 	position:absolute;
 	left:0px;
 	background-color: #d0d2d3;
@@ -38,7 +38,7 @@ a:hover{
 	font-size:18px;
 	z-index: 1000;
 }
-.nav_btn {
+.nav-btn {
 	left:0px;
 	background-color: #d0d2d3;
 	height: 35px;
@@ -51,10 +51,15 @@ a:hover{
 	font-size:18px;
 	z-index: 1000;
 }
-.vision_spacer{
+.right-nav-space{
+	padding-top: 30px;
+	margin-right:0px;
+	margin-left:0px;
+}
+.vision-spacer{
 	position:absolute;
 	left:0px;
-	background-color: yellow;
+	background-color: rgba(208, 210, 211, 0.6);
 	height: 26px;
 	width:100%;
 	top:0px;
@@ -70,9 +75,9 @@ a:hover{
 }
 
 .panel {
-	background-color:rgba(208, 210, 211, 0.5);
+	background-color:rgba(208, 210, 211, 0.6);
 	text-align:center;
-	padding: 70px 60px 35px;
+	padding: 60px 60px 40px;
 	z-index: 1000;
 }
 
