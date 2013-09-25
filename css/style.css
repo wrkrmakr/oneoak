@@ -15,6 +15,7 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 	left: 50%;*/
+
 }
 
 a,
@@ -51,21 +52,6 @@ a:hover{
 	font-weight:normal;
 	font-size:20px;
 }
-.nav-btn-vision {
-	position:absolute;
-	left:0px;
-	background-color: #d0d2d3;
-	height: 35px;
-	width:100%;
-	text-align: center;
-	color: #144733;
-	padding-top: 18px;
-	padding-bottom:7px;
-	bottom:0px;
-	font-family:"Novecento-Normal", Century Gothic, sans-serif;
-	font-size:18px;
-	z-index: 1000;
-}
 
 .nav-btn-active {
 	background-color: #144733;
@@ -77,6 +63,21 @@ a:hover{
 	color: #144733;
 }
 
+.nav-btn-vision {
+	position:absolute;
+	left:0px;
+	/*background-color: #d0d2d3;*/
+	height: 35px;
+	width:100%;
+	text-align: center;
+	/*color: #144733;*/
+	padding-top: 18px;
+	padding-bottom:7px;
+	bottom:0px;
+	font-family:"Novecento-Normal", Century Gothic, sans-serif;
+	font-size:18px;
+	z-index: 1000;
+}
 .nav-btn {
 	left:0px;
 	/*background-color: #d0d2d3;*/
@@ -154,6 +155,13 @@ a:hover{
 
 .innerPanel h2 {
 	font-size:17px;
+}
+.sidebar h2 {	
+	padding-left:20px;
+	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	color:#144733;
+	font-weight:normal;
+	font-size:12px;	
 }
 
 /*.panel {
