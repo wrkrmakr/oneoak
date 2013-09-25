@@ -1,8 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-/*	margin:0px;
-	padding:0px;*/
+	padding:7%;
 }
 a,
 a:link,
@@ -23,6 +22,21 @@ a:hover{
 /* Grey: #d0d2d3 */
 /* Try Unsemantic grid system? http://unsemantic.com/ */
 
+.title{
+	height:120px;
+	border-bottom:1px;
+	margin:20px 20px 80px;
+	width:79%;
+	border-bottom:1px solid #144733;
+}
+
+.title h1 {
+	position:absolute;
+	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	color:#144733;
+	font-weight:normal;
+	font-size:20px;
+}
 .nav-btn-vision {
 	position:absolute;
 	left:0px;
@@ -77,8 +91,9 @@ a:hover{
 .panel {
 	background-color:rgba(208, 210, 211, 0.6);
 	text-align:center;
-	padding: 60px 60px 40px;
+	padding: 40px 20px 40px;
 	z-index: 1000;
+	height:170px;
 }
 
 .panel p{
@@ -93,6 +108,56 @@ a:hover{
 	font-family:"Univers-Regular", Trebuchet, sans-serif;
 }
 
+.panel h2 {
+	position:absolute;
+	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	color:#144733;
+	font-weight:normal;
+	font-size:20px;	
+}
 .panel .center-image {
 	text-align:center;
 }
+.innerPanel{
+	border-top:1px solid #144733;
+}
+
+.innerPanel p {
+	text-align:left;
+}
+
+.innerPanel h2 {
+	font-size:17px;
+}
+
+/*.panel {
+	background-color:rgba(208, 210, 211, 0.6);
+	text-align:center;
+	padding: 60px 60px 40px;
+	z-index: 1000;
+	height:170px;
+}
+
+.panel p{
+	font-family:"Univers-Light", Trebuchet, sans-serif;
+	text-align:center;
+	font-size:18px;
+	color:#222;
+	z-index: 1000;
+}
+
+.panel p .bold{
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
+}
+
+.panel h2 {
+	position:absolute;
+	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	color:#144733;
+	font-weight:normal;
+	font-size:20px;	
+	border-top:1px solid #144733;
+}
+.panel .center-image {
+	text-align:center;
+}*/
