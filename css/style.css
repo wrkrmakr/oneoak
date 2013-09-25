@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	padding:7%;
+	padding:1%;
 }
 a,
 a:link,
@@ -124,6 +124,7 @@ a:hover{
 
 .innerPanel p {
 	text-align:left;
+	font-size:14px;
 }
 
 .innerPanel h2 {
