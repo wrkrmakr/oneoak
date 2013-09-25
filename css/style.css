@@ -153,9 +153,9 @@ a:hover{
 
 .innerPanel .panel_text {
 	-webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 .panel .center-image {
@@ -168,6 +168,7 @@ a:hover{
 .innerPanel p {
 	text-align:left;
 	font-size:14px;
+	line-height:17px;
 }
 
 .innerPanel h2 {
@@ -194,8 +195,8 @@ a:hover{
 
 .sidebar .btn {
 	/*background-color:#fff;*/
-	height:38px;
-	margin-bottom: 3px;
+	height:46px;
+	margin-bottom: 8px;
 	cursor: pointer;
 }
 
