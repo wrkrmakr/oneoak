@@ -91,6 +91,7 @@ a:hover{
 	font-size:18px;
 	z-index: 1000;
 }
+
 .right-nav-space{
 	padding-top: 30px;
 	margin-right:0px;
@@ -116,15 +117,15 @@ a:hover{
 
 .panel {
 	background-color:rgba(208, 210, 211, 0.6);
-	text-align:center;
+	text-align:left;
 	padding: 40px 20px 40px;
 	z-index: 1000;
-	height:170px;
+	height:223px;
+	overflow-y: hidden;
 }
 
 .panel p{
 	font-family:"Univers-Light", Trebuchet, sans-serif;
-	text-align:center;
 	font-size:18px;
 	color:#222;
 	z-index: 1000;
@@ -135,12 +136,28 @@ a:hover{
 }
 
 .panel h2 {
-	position:absolute;
+	/*position:absolute;*/
 	font-family:"Novecento-Bold", Century Gothic, sans-serif;
 	color:#144733;
 	font-weight:normal;
 	font-size:20px;	
 }
+
+.visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.innerPanel .panel_text {
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .panel .center-image {
 	text-align:center;
 }
@@ -156,12 +173,74 @@ a:hover{
 .innerPanel h2 {
 	font-size:17px;
 }
+
+.sidebar-inner {
+	background-color:rgba(208, 210, 211, 0.6);
+	height:476px;
+}
+
 .sidebar h2 {	
 	padding-left:20px;
 	font-family:"Novecento-Bold", Century Gothic, sans-serif;
 	color:#144733;
 	font-weight:normal;
 	font-size:12px;	
+}
+
+.sidebar .bottom {
+	height:90px;
+	position:relative;
+}
+
+.sidebar .btn {
+	/*background-color:#fff;*/
+	height:38px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+
+.sidebar .label {
+	padding-top: 10px;
+	padding-left:20px;
+	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	font-weight:normal;
+	font-size:12px;	
+	float:left;
+	width: 116px;
+}
+
+.sidebar .active {
+	color: #144733;
+}
+
+.sidebar .inactive {
+	color: #5e7260;
+}
+
+.circle-btn {
+	padding-top: 10px;
+	padding-right: 12px;
+	float:right;
+}
+
+.right_content {
+
+}
+
+.right_content .top_spacer {
+	height:100px;
+}
+
+.right_content .body {
+	height:396px;
+}
+
+.right_content .button_bar {
+	height:90px;
+}
+
+.right_content .button_bar .logo {
+	margin-top:5px;
 }
 
 /*.panel {

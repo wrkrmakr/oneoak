@@ -45,29 +45,45 @@
                 }
             </style>
             <link rel="stylesheet" type="text/css" href="css/one_oak_grid.css">
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <script type="text/javascript" src="js/jquery-ui.js"></script>
+            <script type="text/javascript" src="js/oneoak.js"></script>
     </head>    
     <body class="img-background">
         <div class="container_16 main-box">
-
-<!--             <div class="grid_16">
-                <img src="img/spacer.png"/>
-            </div> -->
             <div class="grid_3 prefix_1 sidebar">               
                 <!-- left menu -->
-                <div style="background-color:rgba(208, 210, 211, 0.6);height:476px;">
+                <div class="sidebar-inner">
                     <div class="title">
                         <h1>VISION</h1>
                     </div>
-                    <div class="grid_3 alpha omega" style="background-color:#fff;height:38px;">
-                        <div style="float:left;"><h2>STANDARDS</h2></div>
-                        <div style="float:right;">+</div>
+                    <div class="grid_3 alpha omega btn" id="standards" >
+                        <div class="label active" >STANDARDS</div>
+                        <div class="circle-btn"><img width="16px" src="img/minus.png"/></div>
+                    </div>     
+                    <div class="grid_3 alpha omega btn" id="believe">
+                        <div class="label inactive" >WHAT WE BELIEVE IN</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
                     </div>
-                    
+                    <div class="grid_3 alpha omega btn" id="quality">
+                        <div class="label inactive" >QUALITY</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="longterm">
+                        <div class="label inactive" >LONG-TERM VISION</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="vision">
+                        <div class="label inactive" >VISION</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="safety">
+                        <div class="label inactive" >SAFETY</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>                 
                 </div>
                 <div class="clear"></div>
-
-                <div style="height:90px;position:relative;">
-
+                <div class="bottom">
                     <div class="vision-spacer"></div>
                     <div class="nav-btn-vision nav-btn-active">
                         VISION
@@ -78,25 +94,53 @@
 
                 <!-- right content -->    
 
-            <div class="grid_11 prefix_1">
-                <div class="grid_9" style="height:100px;"></div>
-                <div class="grid_9" style="height:396px;">
+            <div class="grid_11 prefix_1 right_content">
+                <div class="grid_9 top_spacer" ></div>
+                <div class="grid_9 body">
                     <div class="panel">
                         <div class="innerPanel">
-                          <h2><!-- javascript here -->BLAH</h2>
-                          <p><!-- javascript here -->Gabba gabba</p>
+                            <div id="standards">
+                                <h2><!-- javascript here -->STANDARDS</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>              
+                            <div id="believe" class="hidden">
+                                <h2><!-- javascript here -->WHAT WE BELIEVE IN</h2>
+                                <p>Vision Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>    
+                            <div id="quality" class="hidden">
+                                <h2><!-- javascript here -->QUALITY</h2>
+                                <p>Quality Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>    
+                            <div id="longterm" class="hidden">
+                                <h2><!-- javascript here -->LONG-TERM VISION</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>    
+                            <div id="vision" class="hidden">
+                                <h2><!-- javascript here -->VISION</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>    
+                            <div id="safety" class="hidden">
+                                <h2><!-- javascript here -->SAFETY</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>                
                         </div>
                     </div>
                 </div>
 
                 <div class="clear"></div>
-                <div style="height:90px;">
+                <div class="button_bar">
                     <div class="right-nav-space grid_3 pull_1 alpha">
                         <div class="nav-btn nav-btn-inactive">
                             SERVICES
                         </div>
                     </div>
-                    <div class="grid_2 pull_1" style="margin-top:5px;">
+                    <div class="grid_2 pull_1 logo">
                         <img src="img/logo-middlepages.png"/>
                     </div>
                     <div class="right-nav-space grid_3 pull_1 alpha">
