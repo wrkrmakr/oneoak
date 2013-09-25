@@ -1,8 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	padding:7%;
+	/*padding:1%;*/
+	position: relative;
+	vertical-align: center;
 }
+
+.main-box {
+	height: 640px;
+	width: 960px;
+	position: absolute;
+}
+
 a,
 a:link,
 a:visited,
