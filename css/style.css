@@ -3,15 +3,17 @@
 body{
 /*	padding:1%;*/
 /*	position: relative;*/
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .main-box {
 	height: 640px;
 	width: 960px;
-	position: absolute;
+/*	position: absolute;
 	top:50%;
 	margin-top:-320px;
+	left: 50%;
+	margin-left: -480px;*/
 }
 
 a,
@@ -63,12 +65,23 @@ a:hover{
 	font-size:18px;
 	z-index: 1000;
 }
+
+.nav-btn-active {
+	background-color: #144733;
+	color: #d0d2d3;
+}
+
+.nav-btn-inactive {
+	background-color: #d0d2d3;
+	color: #144733;
+}
+
 .nav-btn {
 	left:0px;
-	background-color: #d0d2d3;
+	/*background-color: #d0d2d3;*/
 	height: 35px;
 	text-align: center;
-	color: #144733;
+	/*color: #144733;*/
 	padding-top: 18px;
 	padding-bottom:7px;
 	bottom:0px;
