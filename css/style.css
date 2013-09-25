@@ -3,7 +3,7 @@
 body{
 /*	padding:1%;*/
 /*	position: relative;*/
-	/*text-align: center;*/
+/*	text-align: center;*/
 }
 
 .main-box {
@@ -12,8 +12,8 @@ body{
 /*	position: absolute;
 	top:50%;
 	margin-top:-320px;
-	left: 50%;
-	margin-left: -480px;*/
+	margin-left:auto;
+	margin-right:auto;*/
 }
 
 a,
@@ -50,21 +50,6 @@ a:hover{
 	font-weight:normal;
 	font-size:20px;
 }
-.nav-btn-vision {
-	position:absolute;
-	left:0px;
-	background-color: #d0d2d3;
-	height: 35px;
-	width:100%;
-	text-align: center;
-	color: #144733;
-	padding-top: 18px;
-	padding-bottom:7px;
-	bottom:0px;
-	font-family:"Novecento-Normal", Century Gothic, sans-serif;
-	font-size:18px;
-	z-index: 1000;
-}
 
 .nav-btn-active {
 	background-color: #144733;
@@ -76,6 +61,21 @@ a:hover{
 	color: #144733;
 }
 
+.nav-btn-vision {
+	position:absolute;
+	left:0px;
+	/*background-color: #d0d2d3;*/
+	height: 35px;
+	width:100%;
+	text-align: center;
+	/*color: #144733;*/
+	padding-top: 18px;
+	padding-bottom:7px;
+	bottom:0px;
+	font-family:"Novecento-Normal", Century Gothic, sans-serif;
+	font-size:18px;
+	z-index: 1000;
+}
 .nav-btn {
 	left:0px;
 	/*background-color: #d0d2d3;*/
