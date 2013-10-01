@@ -5,10 +5,11 @@ body{
 }
 
 .main-box {
+	position:absolute;
 	width: 960px;
-	top:0;
+	height:600px;
 	right:0;
-	bottom:0;
+	bottom:8%;
 	left:0;
 }
 
