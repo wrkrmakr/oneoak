@@ -1,21 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-/*	padding:1%;*/
-/*	position: relative;*/
-/*	text-align: center;*/
+	margin:0;
 }
 
 .main-box {
-	height: 640px;
 	width: 960px;
-/*	position: absolute;
-	top:50%;
-	margin-top:-320px;
-	margin-left:auto;
-	margin-right:auto;
-	left: 50%;*/
-
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
 }
 
 a,
@@ -55,18 +49,18 @@ a:hover{
 
 .nav-btn-active {
 	background-color: #144733;
-	color: #d0d2d3;
+	color: #f2f2f2;
 }
 
 .nav-btn-inactive {
-	background-color: #d0d2d3;
+	background-color: #f2f2f2;
 	color: #144733;
 }
 
 .nav-btn-vision {
 	position:absolute;
 	left:0px;
-	/*background-color: #d0d2d3;*/
+	/*background-color: #f2f2f2;*/
 	height: 35px;
 	width:100%;
 	text-align: center;
@@ -80,10 +74,8 @@ a:hover{
 }
 .nav-btn {
 	left:0px;
-	/*background-color: #d0d2d3;*/
 	height: 35px;
 	text-align: center;
-	/*color: #144733;*/
 	padding-top: 18px;
 	padding-bottom:7px;
 	bottom:0px;
@@ -100,23 +92,51 @@ a:hover{
 .vision-spacer{
 	position:absolute;
 	left:0px;
-	background-color: rgba(208, 210, 211, 0.6);
+	background-color: rgba(241, 242, 242, 0.7);
 	height: 26px;
 	width:100%;
 	top:0px;
 	z-index: 1000;	
 }
-
-.img-background {
+/*.img-background {
 	background-image:url(../img/construction.jpg);
-	background-size: cover;
+	background-size:cover;
 	background-position: center top; 
+	background-repeat: no-repeat;
 	background-scroll:scroll;
 	z-index: -10;
+}*/
+.img-background{
+	background-image:url(../img/construction.jpg);
+	background-size: cover;
+	background-position: center center; 
+	width:100%;
+	height:100%;
+	z-index: 0;
+	position: fixed;
+	repeat-y:no-repeat;
+}
+.index_panel{
+	background-color:rgba(241, 242, 242, 0.6);
+	text-align:center;
+	padding: 40px 60px 40px;
+	z-index: 1000;
+	height:223px;
+}
+
+.index_panel p{
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
+	font-size:15px;
+	color:#222;
+	z-index: 1000;
+}
+
+.index_panel p .bold{
+	font-family:"Univers-Bold", Trebuchet, sans-serif;
 }
 
 .panel {
-	background-color:rgba(208, 210, 211, 0.6);
+	background-color:rgba(241, 242, 242, 0.6);
 	text-align:left;
 	padding: 40px 20px 40px;
 	z-index: 1000;
@@ -125,24 +145,26 @@ a:hover{
 }
 
 .panel p{
-	font-family:"Univers-Light", Trebuchet, sans-serif;
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
 	font-size:18px;
 	color:#222;
 	z-index: 1000;
 }
 
 .panel p .bold{
-	font-family:"Univers-Regular", Trebuchet, sans-serif;
+	font-family:"Univers-Bold", Trebuchet, sans-serif;
 }
 
 .panel h2 {
-	/*position:absolute;*/
 	font-family:"Novecento-Bold", Century Gothic, sans-serif;
 	color:#144733;
 	font-weight:normal;
 	font-size:20px;	
 }
 
+.index {
+	text-align:center;
+}
 .visible {
 	display: block;
 }
@@ -172,12 +194,18 @@ a:hover{
 }
 
 .innerPanel h2 {
-	font-size:17px;
+	font-size:16px;
 }
 
 .sidebar-inner {
-	background-color:rgba(208, 210, 211, 0.6);
+	background-color:rgba(241, 242, 242, 0.7);
 	height:476px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .sidebar h2 {	
@@ -198,7 +226,7 @@ a:hover{
 	height:46px;
 	margin-bottom: 8px;
 	cursor: pointer;
-}
+	}
 
 .sidebar .label {
 	padding-top: 10px;
@@ -224,12 +252,16 @@ a:hover{
 	float:right;
 }
 
-.right_content {
-
-}
-
 .right_content .top_spacer {
 	height:100px;
+}
+
+.top_index_spacer{
+	height:100px;
+}
+
+.index_spacer {
+	margin-top:93px;
 }
 
 .right_content .body {
@@ -244,34 +276,6 @@ a:hover{
 	margin-top:5px;
 }
 
-/*.panel {
-	background-color:rgba(208, 210, 211, 0.6);
-	text-align:center;
-	padding: 60px 60px 40px;
-	z-index: 1000;
-	height:170px;
-}
-
-.panel p{
-	font-family:"Univers-Light", Trebuchet, sans-serif;
-	text-align:center;
-	font-size:18px;
-	color:#222;
-	z-index: 1000;
-}
-
-.panel p .bold{
-	font-family:"Univers-Regular", Trebuchet, sans-serif;
-}
-
-.panel h2 {
-	position:absolute;
-	font-family:"Novecento-Bold", Century Gothic, sans-serif;
-	color:#144733;
-	font-weight:normal;
-	font-size:20px;	
-	border-top:1px solid #144733;
-}
 .panel .center-image {
 	text-align:center;
-}*/
+}
