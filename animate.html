@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>one oak test</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/one_oak_grid.css">
+
+  <style type="text/css">
+    .sidebar {
+      background-color: blue;
+      height: inherit;
+    }
+    .sidebar_minimized {
+      height: 1px;
+      padding-top: 394px;
+      overflow: none;
+      opacity:0.0;
+      filter:alpha(opacity=0); /* For IE8 and earlier */
+      display: none;
+    }
+
+    .content{
+      background-color: yellow;
+      height: inherit;
+    }
+
+    .content_minimized {
+      height: 1px;
+      padding-top: 394px;
+      overflow: none;
+      opacity:0.0;
+      filter:alpha(opacity=0); /* For IE8 and earlier */
+      display: none;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<div class="container_16">
+  <div class="grid_16" style="background-color: red;" >
+    <div class="grid_3">
+      <div style="height: 395px; background-color: pink;">
+        <div class="sidebar" id="sidebar">
+          side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side side
+        </div>
+      </div>
+    </div>
+    <div class="grid_13 alpha omega" >
+      <div style="height: 395px; background-color: pink;">
+        <div class="content" id="content">
+          content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="grid_16" style="background-color: green;">
+    <div class="grid_3" style="background-color: grey; height: 60px;">
+      Button1
+    </div>
+    <div class="grid_3" style="background-color: grey; height: 60px;">
+      Button2
+    </div>
+    <div class="grid_3" style="background-color: grey; height: 60px;">
+      Button3
+    </div>
+    <div class="grid_3" style="background-color: grey; height: 60px;">
+      Button4
+    </div>
+    <div class="grid_3" style="background-color: grey; height: 60px;">
+      Button5
+    </div
+  </div>
+</div>
+</body>
+</html>
+
+<input type="button" value="Minimize sidebar" id="btn-sidebar" />
+<input type="button" value="Minimize content" id="btn-content" />
+<input type="button" value="Minimize both" id="btn-both" />
+
+<script type="text/javascript">
+  $('#btn-sidebar').click(function(e) {
+    $( '#sidebar' ).switchClass( "sidebar", "sidebar_minimized", 1000, "easeInOutQuad" );
+  })
+
+  $('#btn-content').click(function(e) {
+    $( '#content' ).switchClass( "content", "content_minimized", 1000, "easeInOutQuad" );
+  })
+
+  $('#btn-both').click(function(e) {
+    $( '#sidebar' ).switchClass( "sidebar", "sidebar_minimized", 1000, "easeInOutQuad" );
+    $( '#content' ).switchClass( "content", "content_minimized", 1000, "easeInOutQuad" );
+  })
+</script>
