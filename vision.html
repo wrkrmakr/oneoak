@@ -54,7 +54,7 @@
         <div class="container_16 main-box">
             <div class="grid_3 prefix_1 sidebar">
                 <!-- left menu -->
-                <div class="sidebar-inner">
+                <div class="sidebar-inner" id="sidebar-vision" style="display:block;">
                     <div class="title">
                         <h1>VISION</h1>
                     </div>
@@ -83,12 +83,75 @@
                         <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
                     </div>                 
                 </div>
+                <div class="sidebar-inner" id="sidebar-services" style="display:none;">
+                    <div class="title">
+                        <h1>SERVICES</h1>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="standards">
+                        <div class="label active">PRE-CONSTRUCTION SERVICES</div>
+                        <div class="circle-btn"><img width="16px" src="img/minus.png"/></div>
+                    </div>     
+                    <div class="grid_3 alpha omega btn" id="believe">
+                        <div class="label inactive">WHAT WE BELIEVE IN</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="quality">
+                        <div class="label inactive">QUALITY</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="longterm">
+                        <div class="label inactive">LONG-TERM VISION</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>                
+                </div>   
+                <div class="sidebar-inner" id="sidebar-work" style="display:none;">
+                    <div class="title">
+                        <h1>WORK</h1>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="standards">
+                        <div class="label active">LCBO</div>
+                        <div class="circle-btn"><img width="16px" src="img/minus.png"/></div>
+                    </div>     
+                    <div class="grid_3 alpha omega btn" id="believe">
+                        <div class="label inactive">WHAT WE BELIEVE IN</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="quality">
+                        <div class="label inactive">QUALITY</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="longterm">
+                        <div class="label inactive">LONG-TERM VISION</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>                
+                </div>
+                <div class="sidebar-inner" id="sidebar-contact" style="display:none;">
+                    <div class="title">
+                        <h1>CONTACT</h1>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="standards">
+                        <div class="label active">RAHUL FARIA</div>
+                        <div class="circle-btn"><img width="16px" src="img/minus.png"/></div>
+                    </div>     
+                    <div class="grid_3 alpha omega btn" id="believe">
+                        <div class="label inactive">WHAT WE BELIEVE IN</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>
+                    <div class="grid_3 alpha omega btn" id="quality">
+                        <div class="label inactive">QUALITY</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>  
+                    <div class="grid_3 alpha omega btn" id="longterm">
+                        <div class="label inactive">LONG-TERM VISION</div>
+                        <div class="circle-btn"><img width="16px" src="img/plus.png"/></div>
+                    </div>                
+                </div>               
                 <div class="clear"></div>
                 <div class="bottom">
                     <div class="vision-spacer"></div>
-                    <a href="vision.html"><div class="nav-btn-vision nav-btn-active">
+                    <div class="nav-btn-vision nav-btn-active" data-sidebar-target="#sidebar-vision">
                         VISION
-                    </div></a>
+                    </div>
                 </div> 
 
             </div>
@@ -138,22 +201,22 @@
                 <div class="clear"></div>
                 <div class="button_bar">
                     <div class="right-nav-space grid_3 pull_1 alpha">
-                        <a href="services.html"><div class="nav-btn nav-btn-inactive">
+                        <div class="nav-btn nav-btn-inactive" data-sidebar-target="#sidebar-services">
                             SERVICES
-                        </div></a>
+                        </div>
                     </div>
                     <div class="grid_2 pull_1 logo">
                         <a href="index.html"><img src="img/logo-middlepages.png"/></a>
                     </div>
                     <div class="right-nav-space grid_3 pull_1">
-                        <a href="work.html"><div class="nav-btn nav-btn-inactive">
+                        <div class="nav-btn nav-btn-inactive" data-sidebar-target="#sidebar-work">
                             WORK
-                        </div></a>
+                        </div>
                     </div>
                     <div class="right-nav-space grid_3 pull_1 omega">
-                        <a href="contact.html"><div class="nav-btn nav-btn-inactive">
+                        <div class="nav-btn nav-btn-inactive" data-sidebar-target="#sidebar-contact">
                             CONTACT
-                        </div></a>
+                        </div>
                     </div>
                 </div> 
             </div>
