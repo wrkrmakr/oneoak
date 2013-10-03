@@ -16,7 +16,7 @@ $( document ).ready(function() {
     event.preventDefault();
 
     $('.panel').fadeIn();
-    
+
     $('.innerPanel div').removeClass('visible').addClass('hidden');
     $('.innerPanel #' + this.id).removeClass('hidden').addClass('visible');
 
