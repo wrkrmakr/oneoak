@@ -1,8 +1,22 @@
 $( document ).ready(function() {
 
+// alert(location.href);
+  var hash=location.hash.replace('#', '');
+  // alert(hash);
+    // $('.sidebar-inner').hide();
+    $('#' + 'sidebar-' + hash).show();
+
+    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+
+    // $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+    // $('.nav-btn-vision').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+    // $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+
   $('.btn').click(function(event){
     event.preventDefault();
 
+    $('.panel').fadeIn();
+    
     $('.innerPanel div').removeClass('visible').addClass('hidden');
     $('.innerPanel #' + this.id).removeClass('hidden').addClass('visible');
 
@@ -15,6 +29,12 @@ $( document ).ready(function() {
 
   $('.nav-btn').click(function(event){
     event.preventDefault();
+  
+    $('.panel').fadeOut();
+
+    $('div.label').addClass('inactive').removeClass('active');
+    $('.circle-btn').children('img').attr('src', 'img/plus.png');
+
     $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
     $('.nav-btn-vision').addClass('nav-btn-inactive').removeClass('nav-btn-active');
     $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
@@ -27,6 +47,11 @@ $( document ).ready(function() {
 
  $('.nav-btn-vision').click(function(event){
     event.preventDefault();
+
+    $('.panel').fadeOut();
+
+    $('div.label').addClass('inactive').removeClass('active');
+    $('.circle-btn').children('img').attr('src', 'img/plus.png');
 
     // highlighting active nav button 
     $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');

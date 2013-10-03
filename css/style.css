@@ -35,7 +35,7 @@ a:hover{
 .title{
 	height:120px;
 	border-bottom:1px;
-	margin:20px;
+	margin:0px 20px 10px;
 	width:79%;
 	border-bottom:1px solid #144733;
 }
@@ -145,6 +145,7 @@ a:hover{
 	z-index: 1000;
 	height:223px;
 	overflow-y: hidden;
+	display:none;
 }
 
 .panel p{
@@ -202,7 +203,7 @@ a:hover{
 
 .sidebar-inner {
 	background-color:rgba(241, 242, 242, 0.7);
-	height:476px;
+	height:496px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -234,7 +235,7 @@ a:hover{
 .sidebar .label {
 	padding-top: 10px;
 	padding-left:20px;
-	font-family:"Novecento-Bold", Century Gothic, sans-serif;
+	font-family:"Novecento-DemBold", Century Gothic, sans-serif;
 	font-weight:normal;
 	font-size:12px;	
 	float:left;
@@ -256,7 +257,7 @@ a:hover{
 }
 
 .right_content .top_spacer {
-	height:100px;
+	height:80px;
 }
 
 .top_index_spacer{
@@ -268,7 +269,7 @@ a:hover{
 }
 
 .right_content .body {
-	height:396px;
+	height:416px;
 }
 
 .right_content .button_bar {
