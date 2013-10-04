@@ -196,22 +196,12 @@ a:hover{
 	font-size:14px;
 	line-height:17px;
 }
-
 .innerPanel h2 {
 	font-size:16px;
 }
-
-.sidebar-inner {
-	background-color:rgba(241, 242, 242, 0.7);
+.sidebar{
 	height:496px;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
-
 .sidebar h2 {	
 	padding-left:20px;
 	font-family:"Novecento-Bold", Century Gothic, sans-serif;
@@ -219,12 +209,10 @@ a:hover{
 	font-weight:normal;
 	font-size:12px;	
 }
-
 .sidebar .bottom {
 	height:90px;
 	position:relative;
 }
-
 .sidebar .btn {
 	/*background-color:#fff;*/
 	height:46px;
@@ -249,6 +237,22 @@ a:hover{
 .sidebar .inactive {
 	color: #5e7260;
 }
+.sidebar-inner {
+	background-color:rgba(241, 242, 242, 0.7);
+	height:inherit;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.sidebar-inner-minimized{
+	height:1px;
+	padding-top:495px;
+	overflow:none;
+	display:none;
+}
 .circle-btn {
 	padding-top: 10px;
 	padding-right: 12px;
@@ -267,7 +271,7 @@ a:hover{
 	font-weight:normal;
 	font-size:14px;	
 	padding-left:0px;
-	margin:0;
+	margin:15px 0px;
 }
 #contact_info p{
 	font-family:"Univers-Light", Trebuchet, sans-serif;

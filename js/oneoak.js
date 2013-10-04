@@ -1,65 +1,63 @@
 $( document ).ready(function() {
 
-// alert(location.href);
-  var hash=location.hash.replace('#', '');
-  // alert(hash);
-    // $('.sidebar-inner').hide();
+    var hash=location.hash.replace('#', '');
     $('#' + 'sidebar-' + hash).show();
 
     $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
 
-    // $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    // $('.nav-btn-vision').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    // $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+    // $('#' + 'sidebar-' + hash).hide();
+    // $('#' + 'sidebar-' + hash).slideUp(2000);
 
-  $('.btn').click(function(event){
-    event.preventDefault();
+    $('#' + 'sidebar-' + hash).switchClass('.sidebar-inner-minimized', 'sidebar-inner', 2000);
 
-    $('.panel').fadeIn();
+    $('.btn').click(function(event){
+        event.preventDefault();
 
-    $('.innerPanel div').removeClass('visible').addClass('hidden');
-    $('.innerPanel #' + this.id).removeClass('hidden').addClass('visible');
+        $('.panel').fadeIn();
 
-    $('div.label').addClass('inactive').removeClass('active');
-    $(this).children('.label').addClass('active').removeClass('inactive');
+        $('.innerPanel div').removeClass('visible').addClass('hidden');
+        $('.innerPanel #' + this.id).removeClass('hidden').addClass('visible');
 
-    $('.circle-btn').children('img').attr('src', 'img/plus.png');
-    $(this).children('.circle-btn').children('img').attr('src', 'img/minus.png');
-  });
+        $('div.label').addClass('inactive').removeClass('active');
+        $(this).children('.label').addClass('active').removeClass('inactive');
 
-  $('.nav-btn').click(function(event){
-    event.preventDefault();
-  
-    $('.panel').fadeOut();
+        $('.circle-btn').children('img').attr('src', 'img/plus.png');
+        $(this).children('.circle-btn').children('img').attr('src', 'img/minus.png');
+    });
 
-    $('div.label').addClass('inactive').removeClass('active');
-    $('.circle-btn').children('img').attr('src', 'img/plus.png');
+    $('.nav-btn').click(function(event){
+        event.preventDefault();
 
-    $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    $('.nav-btn-vision').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+        $('.panel').fadeOut();
 
-    // showing sidebar associated with the nav button clicked
-	var sidebar_target = $(this).data('sidebarTarget');
-	$('.sidebar-inner').hide();
-	$(sidebar_target).show();
-  });
+        $('div.label').addClass('inactive').removeClass('active');
+        $('.circle-btn').children('img').attr('src', 'img/plus.png');
 
- $('.nav-btn-vision').click(function(event){
-    event.preventDefault();
+        $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+        $('.nav-btn-vision').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+        $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
 
-    $('.panel').fadeOut();
+        // showing sidebar associated with the nav button clicked
+        var sidebar_target = $(this).data('sidebarTarget');
+        $('.sidebar-inner').hide();
+        $(sidebar_target).show();
+    });
 
-    $('div.label').addClass('inactive').removeClass('active');
-    $('.circle-btn').children('img').attr('src', 'img/plus.png');
+    $('.nav-btn-vision').click(function(event){
+        event.preventDefault();
 
-    // highlighting active nav button 
-    $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+        $('.panel').fadeOut();
 
-    // showing sidebar associated with the nav button clicked
-	var sidebar_target = $(this).data('sidebarTarget');
-	$('.sidebar-inner').hide();
-	$(sidebar_target).show();
-  });
+        $('div.label').addClass('inactive').removeClass('active');
+        $('.circle-btn').children('img').attr('src', 'img/plus.png');
+
+        // highlighting active nav button 
+        $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+        $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+
+        // showing sidebar associated with the nav button clicked
+        var sidebar_target = $(this).data('sidebarTarget');
+        $('.sidebar-inner').hide();
+        $(sidebar_target).show();
+    });
 });
