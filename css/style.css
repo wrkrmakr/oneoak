@@ -249,13 +249,31 @@ a:hover{
 .sidebar .inactive {
 	color: #5e7260;
 }
-
 .circle-btn {
 	padding-top: 10px;
 	padding-right: 12px;
 	float:right;
 }
-
+#contact_info {
+	position:relative;
+	height:80px;
+	margin-top:175px;
+	padding-left:20px;
+	float:left;
+	width: 140px;
+}
+#contact_info h2{
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
+	font-weight:normal;
+	font-size:14px;	
+	padding-left:0px;
+	margin:0;
+}
+#contact_info p{
+	font-family:"Univers-Light", Trebuchet, sans-serif;
+	font-size:14px;	
+	margin:0;
+}
 .right_content .top_spacer {
 	height:80px;
 }
