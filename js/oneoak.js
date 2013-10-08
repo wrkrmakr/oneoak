@@ -1,15 +1,17 @@
 $( document ).ready(function() {
 
     var hash=location.hash.replace('#', '');
+    // $('.sidebar').show();
     $('#' + 'sidebar-' + hash).show();
 
-    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+    $('#' + 'sidebar-' + hash).switchClass('sidebar-inner-minimized', 'sidebar-inner', 2000);
+    // $('.sidebar').switchClass('sidebar-parent-minimized',    'sidebar-parent', 2000);
 
     // $('#' + 'sidebar-' + hash).hide();
     // $('#' + 'sidebar-' + hash).slideUp(2000);
-
-    $('#' + 'sidebar-' + hash).switchClass('.sidebar-inner-minimized', 'sidebar-inner', 2000);
-    $('#' + 'sidebar-' + hash).switchClass('.sidebar-minimized', 'sidebar-', 2000);
+    // $('.sidebar').switchClass('.sidebar-minimized', 'sidebar', 2000);
+    
+    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
 
     $('.btn').click(function(event){
         event.preventDefault();
