@@ -237,6 +237,10 @@ a:hover{
 .sidebar .inactive {
 	color: #5e7260;
 }
+.sidebar-minimized{
+	height:1px;
+	padding-top:495px;
+}
 .sidebar-inner {
 	background-color:rgba(241, 242, 242, 0.7);
 	height:inherit;
@@ -277,6 +281,9 @@ a:hover{
 	font-family:"Univers-Light", Trebuchet, sans-serif;
 	font-size:14px;	
 	margin:0;
+}
+.right_content{
+	height:497px;
 }
 .right_content .top_spacer {
 	height:80px;

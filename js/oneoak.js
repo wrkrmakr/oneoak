@@ -9,6 +9,7 @@ $( document ).ready(function() {
     // $('#' + 'sidebar-' + hash).slideUp(2000);
 
     $('#' + 'sidebar-' + hash).switchClass('.sidebar-inner-minimized', 'sidebar-inner', 2000);
+    $('#' + 'sidebar-' + hash).switchClass('.sidebar-minimized', 'sidebar-', 2000);
 
     $('.btn').click(function(event){
         event.preventDefault();
