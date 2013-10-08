@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>one oak test</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+  <style type="text/css">
+    #BusyBox
+    {
+      background: -moz-linear-gradient(center top , #F1F2F2 0%, #F1F2F2 100%) repeat scroll 0 0 transparent;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      bottom: 0;
+      font-size: 0.8em;
+      font-style: normal;
+      font-weight: normal;
+      left: 50%;
+      margin-left: -45px;
+      padding-top: 20px;
+      position: fixed;
+      text-align: center;
+      width: 90px;
+      height: 128px;
+      margin-bottom: -128px;
+      background-repeat:no-repeat;
+      background-position: center center;
+    }
+
+  </style>
+
+  </head>
+
+<button id="Process" >Click me</button>
+<div id="BusyBox" >
+    <img src="img/logo-main.png"  alt="Loading..."/>
+    <div>
+    <em>Loading Wait...</em>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+        var flag = 1;
+
+        $("#Process").click(function () {
+            if (flag == 1) {
+                $('#BusyBox').stop(true).animate({ 'margin-bottom': 0, 'opacity': '1' }, { queue: false, duration: 300 });
+                flag = 0;
+            }
+            else {
+                $('#BusyBox').stop(true).animate({ 'margin-bottom': -128, 'opacity': '1' }, { queue: false, duration: 300 });
+                flag = 1;
+            }
+
+            return false;
+        });
+    });
+
+</script>

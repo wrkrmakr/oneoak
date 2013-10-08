@@ -262,12 +262,13 @@ a:hover{
 	-ms-user-select: none;
 	user-select: none;
 	display: block;
+	overflow: hidden;
 }
 .sidebar-inner-minimized{
 	height:1px;
 	padding-top:495px;
-	overflow:hidden;
 	display:none;
+	overflow:hidden;
 }
 .circle-btn {
 	padding-top: 10px;

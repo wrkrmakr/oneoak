@@ -1,3 +1,6 @@
+// Slide menu up from bottom using negative margin
+// http://jsfiddle.net/SpMns/
+
 $( document ).ready(function() {
 
     var hash=location.hash.replace('#', '');
