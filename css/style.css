@@ -7,7 +7,7 @@ body{
 .main-box {
 	position:absolute;
 	width: 960px;
-	height:600px;
+	height: 530px;
 	right:0;
 	bottom:8%;
 	left:0;
@@ -201,9 +201,13 @@ a:hover{
 }
 
 .sidebar-parent {
-	height:496px;
-	padding-top: 0px;
+	height:inherit;
+	/*padding-top: 0px;*/
 	display: block;
+
+	width: inherit;
+	overflow: hidden;
+	position: relative;
 }
 
 /*.sidebar{*/
@@ -219,8 +223,12 @@ a:hover{
 	font-size:12px;	
 }
 .sidebar .bottom {
-	height:90px;
-	position:relative;
+	height: 60px;
+	/*position:absolute;*/
+	width: inherit;
+
+	bottom: 0px;
+	position: absolute;
 }
 .sidebar .btn {
 	/*background-color:#fff;*/
@@ -246,15 +254,17 @@ a:hover{
 .sidebar .inactive {
 	color: #5e7260;
 }
+
 .sidebar-parent-minimized{
 	height:1px;
 	overflow: hidden;
 	display: none;
 	padding-top:495px;
 }
+
 .sidebar-inner {
 	background-color:rgba(241, 242, 242, 0.7);
-	height:496px;
+	/*height:496px;*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -262,14 +272,26 @@ a:hover{
 	-ms-user-select: none;
 	user-select: none;
 	display: block;
-	overflow: hidden;
+	/*overflow: hidden;*/
+
+	padding-bottom: -2px;
+
+  width: inherit;
+  height: 466px;
+      
+  position: absolute; /*mandatory*/
+      
+  overflow: hidden;
+
 }
+
 .sidebar-inner-minimized{
 	height:1px;
 	padding-top:495px;
 	display:none;
 	overflow:hidden;
 }
+
 .circle-btn {
 	padding-top: 10px;
 	padding-right: 12px;
@@ -278,7 +300,7 @@ a:hover{
 #contact_info {
 	position:relative;
 	height:80px;
-	margin-top:175px;
+	margin-top:115px;
 	padding-left:20px;
 	float:left;
 	width: 140px;
@@ -296,14 +318,14 @@ a:hover{
 	margin:0;
 }
 .right_content{
-	height:497px;
+	height:inherit;
 }
 .right_content .top_spacer {
 	height:80px;
 }
 
 .top_index_spacer{
-	height:100px;
+	height: 44px;
 }
 
 .index_spacer {
@@ -311,11 +333,16 @@ a:hover{
 }
 
 .right_content .body {
-	height:416px;
+	height:380px;
 }
 
 .right_content .button_bar {
 	height:90px;
+	width: inherit;
+
+	bottom: 0px;
+	
+	position: absolute;
 }
 
 .right_content .button_bar .logo {
