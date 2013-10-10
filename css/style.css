@@ -7,7 +7,7 @@ body{
 .main-box {
 	position:absolute;
 	width: 960px;
-	height: 530px;
+	height: 580px;
 	right:0;
 	bottom:8%;
 	left:0;
@@ -58,22 +58,6 @@ a:hover{
 	color: #144733;
 }
 
-.nav-btn-vision {
-	position:absolute;
-	left:0px;
-	/*background-color: #f2f2f2;*/
-	height: 35px;
-	width:100%;
-	text-align: center;
-	/*color: #144733;*/
-	padding-top: 18px;
-	padding-bottom:7px;
-	bottom:0px;
-	font-family:"Novecento-Normal", Century Gothic, sans-serif;
-	font-size:18px;
-	z-index: 1000;
-	cursor:pointer;
-}
 .nav-btn {
 	left:0px;
 	height: 35px;
@@ -86,6 +70,23 @@ a:hover{
 	z-index: 1000;
 	cursor:pointer;
 }
+
+/*.nav-btn-vision {
+	position:absolute;
+	left:0px;
+	background-color: #f2f2f2;
+	height: 35px;
+	width:100%;
+	text-align: center;
+	color: #144733;
+	padding-top: 18px;
+	padding-bottom:7px;
+	bottom:0px;
+	font-family:"Novecento-Normal", Century Gothic, sans-serif;
+	font-size:18px;
+	z-index: 1000;
+	cursor:pointer;
+}*/
 
 .right-nav-space{
 	padding-top: 30px;
@@ -201,7 +202,7 @@ a:hover{
 }
 
 .sidebar-parent {
-	height:inherit;
+	height:518px;
 	/*padding-top: 0px;*/
 	display: block;
 
@@ -222,10 +223,10 @@ a:hover{
 	font-weight:normal;
 	font-size:12px;	
 }
-.sidebar .bottom {
+.bottom {
 	height: 60px;
 	/*position:absolute;*/
-	width: inherit;
+	width: 176px;
 
 	bottom: 0px;
 	position: absolute;
@@ -255,16 +256,8 @@ a:hover{
 	color: #5e7260;
 }
 
-.sidebar-parent-minimized{
-	height:1px;
-	overflow: hidden;
-	display: none;
-	padding-top:495px;
-}
-
 .sidebar-inner {
 	background-color:rgba(241, 242, 242, 0.7);
-	/*height:496px;*/
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -272,25 +265,25 @@ a:hover{
 	-ms-user-select: none;
 	user-select: none;
 	display: block;
-	/*overflow: hidden;*/
 
-	padding-bottom: -2px;
+	bottom: 2px;
 
   width: inherit;
-  height: 466px;
+  height: 516px;
       
   position: absolute; /*mandatory*/
-      
   overflow: hidden;
 
+
 }
 
-.sidebar-inner-minimized{
-	height:1px;
-	padding-top:495px;
-	display:none;
-	overflow:hidden;
+/*.sidebar-full {
+	margin-bottom: 0px;
 }
+
+.sidebar-minimized {
+	margin-bottom: -520px;
+}*/
 
 .circle-btn {
 	padding-top: 10px;
