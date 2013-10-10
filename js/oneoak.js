@@ -7,7 +7,7 @@ $( document ).ready(function() {
     // $('.sidebar').show();
     $('#' + 'sidebar-' + hash).show();
 
-    $('#' + 'sidebar-' + hash).switchClass('sidebar-inner-minimized', 'sidebar-inner', 2000);
+    // $('#' + 'sidebar-' + hash).switchClass('sidebar-inner-minimized', 'sidebar-inner', 2000);
     // $('.sidebar').switchClass('sidebar-parent-minimized',    'sidebar-parent', 2000);
 
     // $('#' + 'sidebar-' + hash).hide();
