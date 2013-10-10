@@ -69,6 +69,12 @@ a:hover{
 	font-size:18px;
 	z-index: 1000;
 	cursor:pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /*.nav-btn-vision {
@@ -93,7 +99,7 @@ a:hover{
 	margin-right:0px;
 	margin-left:0px;
 }
-.vision-spacer{
+/*.vision-spacer{
 	position:absolute;
 	left:0px;
 	background-color: rgba(241, 242, 242, 0.7);
@@ -101,7 +107,7 @@ a:hover{
 	width:100%;
 	top:0px;
 	z-index: 1000;	
-}
+}*/
 /*.img-background {
 	background-image:url(../img/construction.jpg);
 	background-size:cover;
@@ -202,7 +208,7 @@ a:hover{
 }
 
 .sidebar-parent {
-	height:518px;
+	height:516px;
 	/*padding-top: 0px;*/
 	display: block;
 
@@ -266,13 +272,13 @@ a:hover{
 	user-select: none;
 	display: block;
 
-	bottom: 2px;
+	bottom: 0px;
 
-  width: inherit;
-  height: 516px;
-      
-  position: absolute; /*mandatory*/
-  overflow: hidden;
+	width: inherit;
+	height: 518px;
+	  
+	position: absolute; /*mandatory*/
+	overflow: hidden;
 
 
 }
@@ -293,7 +299,7 @@ a:hover{
 #contact_info {
 	position:relative;
 	height:80px;
-	margin-top:115px;
+	margin-top:175px;
 	padding-left:20px;
 	float:left;
 	width: 140px;
@@ -318,7 +324,7 @@ a:hover{
 }
 
 .top_index_spacer{
-	height: 44px;
+	height: 94px;
 }
 
 .index_spacer {
@@ -336,6 +342,10 @@ a:hover{
 	bottom: 0px;
 	
 	position: absolute;
+}
+
+.logo a{
+	border:none;
 }
 
 .right_content .button_bar .logo {

@@ -60,7 +60,7 @@ $(function(){
         $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
 
         
-        $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 1200, complete: function(){
+        $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 600, complete: function(){
 
             
             $('.sidebar-inner').hide();
@@ -68,7 +68,7 @@ $(function(){
             // alert(sidebar_target);
 
             $(sidebar_target).show();
-            $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 1200 });
+            $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
         }});
 
         
