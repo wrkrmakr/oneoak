@@ -282,6 +282,13 @@ a:hover{
 
 }
 
+
+.portfolio {
+	height: 490px;
+	background-color: rgba(100, 100, 100, 0.5);
+	display: none;
+}
+
 /*.sidebar-full {
 	margin-bottom: 0px;
 }
