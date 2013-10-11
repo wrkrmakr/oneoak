@@ -206,7 +206,20 @@ a:hover{
 .innerPanel h2 {
 	font-size:16px;
 }
-
+.innerPanel ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 20px;
+}
+.innerPanel ul li{
+	font-family:"Univers-Regular", Trebuchet, sans-serif;
+	font-size:12px;
+	padding:3px 0px;
+}
 .sidebar-parent {
 	height:516px;
 	/*padding-top: 0px;*/
