@@ -176,6 +176,7 @@ a:hover{
 .index {
 	text-align:center;
 }
+
 .visible {
 	display: block;
 }
@@ -292,14 +293,11 @@ a:hover{
 	  
 	position: absolute; /*mandatory*/
 	overflow: hidden;
-
 }
-
 
 .portfolio {
 	height: 490px;
 	background-color: rgba(100, 100, 100, 0.5);
-	display: none;
 }
 
 /*.sidebar-full {

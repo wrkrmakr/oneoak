@@ -6,6 +6,10 @@ $(function(){
 
     var hash=location.hash.replace('#', '');
 
+    // $('.sidebar-inner').hide();
+
+    // $('#' + 'sidebar-' + hash).show();
+
     // $('#' + 'sidebar-' + hash).css('marginBottom', -520)
     // $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': -520 }, { queue: false, duration: 1500});
     
@@ -37,26 +41,79 @@ $(function(){
 
         var that = this;
 
-        if ($('.panel').css('display') === 'none'){
-            switchPanel(that);
-            toggleButtons(that);
-            $('.panel').toggle('fold');
-        }
-        else {
-            toggleButtons(that);
-            $('.panel').toggle({effect: 'fold', complete: function(){
+        // Panel, nor portfolio_panel are not visible
+        if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
+
+            if (that.id === 'portfolio'){ // But portfolio is clicked first
+                toggleButton(that);
+                $('#top_spacer').hide();
+                $('#small_panel').hide();
+                $('#portfolio_panel').toggle('fold');
+            }
+            else { // Another btn is clicked
+                toggleButton(that);
+                $('#top_spacer').show();
+                $('#small_panel').show();
                 switchPanel(that);
                 $('.panel').toggle('fold');
+            }            
+        }
+        else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none')
+        { // Panel is visible
+            if ($('.innerPanel #' + that.id).hasClass("visible")) {
+                allButtonsOff(that);
+
+                $('.panel').toggle('fold');
+
+                return;
+            }
+
+            if (that.id === 'portfolio'){
+                toggleButton(that);
+                $('.panel').toggle({effect: 'fold', complete: function(){
+                    switchPanel(that);
+                    $('#top_spacer').hide();
+                    $('#small_panel').hide();
+                    $('#portfolio_panel').toggle('fold');
+                }});
+            }
+            else {
+                toggleButton(that);
+                $('.panel').toggle({effect: 'fold', complete: function(){
+                    switchPanel(that);
+                    $('.panel').toggle('fold');
+                }});
+            }
+        }       
+        // Portfolio is visible
+        else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
+            
+            if (that.id === 'portfolio') {
+                allButtonsOff(that);
+
+                $('#portfolio_panel').toggle('fold');
+
+                return;
+            }
+
+            toggleButton(that);
+
+            $('#portfolio_panel').toggle({'effect': 'fold', 'complete': function(){
+                switchPanel(that);
+                $('#top_spacer').show();
+                $('#small_panel').show();
+                $('.panel').toggle('fold');
             }});
-        }               
+        } 
     });
 
     var switchPanel = function(that){
         $('.innerPanel div').removeClass('visible').addClass('hidden');
+
         $('.innerPanel #' + that.id).removeClass('hidden').addClass('visible');
     }
 
-    var toggleButtons = function(that){
+    var toggleButton = function(that){
         $('div.label').addClass('inactive').removeClass('active');
         $(that).children('.label').addClass('active').removeClass('inactive');
 
@@ -64,8 +121,16 @@ $(function(){
         $(that).children('.circle-btn').children('img').attr('src', 'img/minus.png'); 
     }
 
+    var allButtonsOff = function(that){
+        $('div.label').addClass('inactive').removeClass('active');
+
+        $('.circle-btn').children('img').attr('src', 'img/plus.png');
+    }
+
     $('.nav-btn').click(function(event){
         event.preventDefault();
+
+        var sidebar_target = $(this).data('sidebarTarget');
 
         $('div.label').addClass('inactive').removeClass('active');
         $('.circle-btn').children('img').attr('src', 'img/plus.png');
@@ -73,49 +138,33 @@ $(function(){
         $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
         $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
         
-        var sidebar_target = $(this).data('sidebarTarget');
-
-        if ($('.panel').css('display') === 'none'){
+        if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
             $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 600, complete: function(){
                 $('.sidebar-inner').hide();
-
-                // alert(sidebar_target);
 
                 $(sidebar_target).show();
                 $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
             }});
         }
-        else {
+        else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none'){
             $('.panel').toggle({effect: 'fold', complete: function(){
                 $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 600, complete: function(){
                     $('.sidebar-inner').hide();
-
-                    // alert(sidebar_target);
 
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
                 }});
             }});
         }
+        else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
+            $('#portfolio_panel').toggle({effect: 'fold', complete: function(){
+                $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 600, complete: function(){
+                    $('.sidebar-inner').hide();
 
-        // // showing sidebar associated with the nav button clicked
+                    $(sidebar_target).show();
+                    $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
+                }});
+            }});
+        }
     });
-
-    // $('.nav-btn-vision').click(function(event){
-    //     event.preventDefault();
-
-    //     $('.panel').fadeOut();
-
-    //     $('div.label').addClass('inactive').removeClass('active');
-    //     $('.circle-btn').children('img').attr('src', 'img/plus.png');
-
-    //     // highlighting active nav button 
-    //     $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
-    //     $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
-
-    //     // showing sidebar associated with the nav button clicked
-    //     var sidebar_target = $(this).data('sidebarTarget');
-    //     $('.sidebar-inner').hide();
-    //     $(sidebar_target).show();
-    // });
 });
