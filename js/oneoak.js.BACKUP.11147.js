@@ -102,6 +102,7 @@ $('.nav-btn').click(function(event){
 
         var sidebar_target = $(this).data('sidebarTarget');
 
+<<<<<<< HEAD
         $('div.label').addClass('inactive').removeClass('active');
         $('.circle-btn').children('img').attr('src', 'img/plus.png');
 
@@ -110,11 +111,28 @@ $('.nav-btn').click(function(event){
         
         if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
             $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 600, complete: function(){
+=======
+    $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+    $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+    
+    if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
+        $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
+            $('.sidebar-inner').hide();
+
+            $(sidebar_target).show();
+            $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
+        }});
+    }
+    else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none'){
+        $('.panel').toggle({effect: 'fold', complete: function(){
+            $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
+>>>>>>> origin/jeffanim
                 $('.sidebar-inner').hide();
 
                 $(sidebar_target).show();
-                $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
+                $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
             }});
+<<<<<<< HEAD
         }
         else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none'){
             $('.panel').toggle({effect: 'fold', complete: function(){
@@ -124,6 +142,17 @@ $('.nav-btn').click(function(event){
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 600 });
                 }});
+=======
+        }});
+    }
+    else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
+        $('#portfolio_panel').toggle({effect: 'fold', complete: function(){
+            $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
+                $('.sidebar-inner').hide();
+
+                $(sidebar_target).show();
+                $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
+>>>>>>> origin/jeffanim
             }});
         }
         else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
@@ -151,7 +180,7 @@ $(function () {
     $('#' + 'sidebar-' + hash).show();
 
     $('#' + 'sidebar-' + hash).css('marginBottom', -520)
-    $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': 0 }, { queue: false, duration: 1500});
+    $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': 0 }, { queue: false, duration: 400});
     
     $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
 
