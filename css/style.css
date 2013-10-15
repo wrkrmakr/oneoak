@@ -83,16 +83,8 @@ a:hover{
 	margin-right:0px;
 	margin-left:0px;
 }
-/*.img-background {
-	background-image:url(../img/construction.jpg);
-	background-size:cover;
-	background-position: center top; 
-	background-repeat: no-repeat;
-	background-scroll:scroll;
-	z-index: -10;
-}*/
-.img-background{
-	background-image:url(../img/construction.jpg);
+
+.img-background{	
 	background-size: cover;
 	background-position: center center; 
 	width:100%;
@@ -101,6 +93,23 @@ a:hover{
 	position: fixed;
 	repeat-y:no-repeat;
 }
+
+#background1{
+	background-image:url(../img/oneoak1.jpg);
+}
+
+#background2{
+	background-image:url(../img/oneoak2.jpg);
+}
+
+#background3{
+	background-image:url(../img/oneoak3.jpg);
+}
+
+#background4{
+	background-image:url(../img/oneoak_2.jpg);
+}
+
 .index_panel{
 	background-color:rgba(241, 242, 242, 0.6);
 	text-align:center;

@@ -116,6 +116,29 @@ $('.nav-btn').click(function(event){
     if($(".sidebar-inner").is(':animated') != true){
 
         var sidebar_target = $(this).data('sidebarTarget');
+        
+        var backgroundToShow = '';
+
+        switch(sidebar_target)
+        {
+        case '#sidebar-Vision':
+          backgroundToShow = '#background1';
+          break;
+        case '#sidebar-Services':
+          backgroundToShow = '#background2';
+          break;
+        case '#sidebar-Work':
+          backgroundToShow = '#background3';
+          break;
+        case '#sidebar-Contact':
+          backgroundToShow = '#background4';
+          break;
+        default:
+          backgroundToShow = '#background1';
+        }
+
+        $('.img-background').fadeOut(1000);
+        $(backgroundToShow).fadeIn(1000);
 
         $('div.label').addClass('inactive').removeClass('active');
         $('.circle-btn').children('img').attr('src', 'img/plus.png');
@@ -162,6 +185,28 @@ $(function () {
     if (hash != 'Vision' && hash != 'Services' && hash != 'Work' && hash != 'Contact'){
         hash = 'Vision';
     }
+
+    var backgroundToShow = '';
+
+    switch(hash)
+    {
+    case 'Vision':
+      backgroundToShow = '#background1';
+      break;
+    case 'Services':
+      backgroundToShow = '#background2';
+      break;
+    case 'Work':
+      backgroundToShow = '#background3';
+      break;
+    case 'Contact':
+      backgroundToShow = '#background4';
+      break;
+    default:
+      backgroundToShow = '#background1';
+    }
+
+    $(backgroundToShow).show();
 
     // Set sidebars to below the screen (using margin-bottom, then slide up the requested one)
     $('.sidebar-inner').css('marginBottom', -520);
