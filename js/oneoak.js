@@ -150,10 +150,6 @@ $(function () {
 
     $('#' + 'sidebar-' + hash).show();
 
-    // alert($('#' + 'sidebar-' + hash).attr('id'));
-    // alert('#' + 'sidebar-' + hash);
-    // alert($('#' + 'sidebar-' + hash).css('display'));
-
     $('#' + 'sidebar-' + hash).css('marginBottom', -520)
     $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': 0 }, { queue: false, duration: 1500});
     
