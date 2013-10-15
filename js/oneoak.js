@@ -157,18 +157,17 @@ $('.nav-btn').click(function(event){
 
 
 $(function () {
-
     var hash=location.hash.replace('#', '');
 
-    $('.sidebar-inner').hide();
+    if (hash != 'Vision' && hash != 'Services' && hash != 'Work' && hash != 'Contact'){
+        hash = 'Vision';
+    }
+
+    // Set sidebars to below the screen (using margin-bottom, then slide up the requested one)
     $('.sidebar-inner').css('marginBottom', -520);
-
     $('#' + 'sidebar-' + hash).show();
-
     $('#' + 'sidebar-' + hash).css('marginBottom', -520)
     $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': 0 }, { queue: false, duration: 400});
     
-    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
-
-    
+    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');    
 });
