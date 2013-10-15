@@ -77,37 +77,12 @@ a:hover{
 	user-select: none;
 }
 
-/*.nav-btn-vision {
-	position:absolute;
-	left:0px;
-	background-color: #f2f2f2;
-	height: 35px;
-	width:100%;
-	text-align: center;
-	color: #144733;
-	padding-top: 18px;
-	padding-bottom:7px;
-	bottom:0px;
-	font-family:"Novecento-Normal", Century Gothic, sans-serif;
-	font-size:18px;
-	z-index: 1000;
-	cursor:pointer;
-}*/
 
 .right-nav-space{
 	padding-top: 30px;
 	margin-right:0px;
 	margin-left:0px;
 }
-/*.vision-spacer{
-	position:absolute;
-	left:0px;
-	background-color: rgba(241, 242, 242, 0.7);
-	height: 26px;
-	width:100%;
-	top:0px;
-	z-index: 1000;	
-}*/
 /*.img-background {
 	background-image:url(../img/construction.jpg);
 	background-size:cover;
