@@ -4,6 +4,8 @@
 // Portfolio slideshow
 // http://www.pixedelic.com/plugins/camera/
 
+var portfolioInitialized = false;
+
 $('.btn').click(function(event){
     event.preventDefault();
 
@@ -21,6 +23,7 @@ $('.btn').click(function(event){
                 $('#top_spacer').hide();
                 $('#small_panel').hide();
                 $('#portfolio_panel').toggle('fold');
+                initializePortfolio(that);
             }
             else { // Another btn is clicked
                 toggleButton(that);
@@ -47,6 +50,7 @@ $('.btn').click(function(event){
                     $('#top_spacer').hide();
                     $('#small_panel').hide();
                     $('#portfolio_panel').toggle('fold');
+                    initializePortfolio(that);
                 }});
             }
             else {
@@ -80,6 +84,23 @@ $('.btn').click(function(event){
         } 
     }
 });
+
+var initializePortfolio = function(that){
+
+    if (portfolioInitialized === false){
+        $('#camera_wrap').camera({
+            height: '380px',
+            loader: 'bar',
+            pagination: false,
+            thumbnails: true,
+            fx: 'simpleFade',
+            playPause: false,
+            autoAdvance: false
+        });
+    }
+
+    portfolioInitialized = true;
+}
 
 var adjustIfConMgmt = function(that){
     if (that.id === 'con_mgmt'){

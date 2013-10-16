@@ -8,8 +8,10 @@ backgrounds[4] = 'img/oneoak_2.jpg';
 var min = 0;
 var max = 4;
 
-$.fn.preload = function() {
+$.fn.preload = function(complete) {
   this.each(function(){
     $('<img/>')[0].src = this;
   });
+
+  complete();
 }

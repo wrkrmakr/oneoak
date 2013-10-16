@@ -11,6 +11,7 @@
         <meta name="author" content="ONMEDIA">      
             
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/camera.css"/>
         <style>
             @font-face {
                 font-family: "Univers-Light";
@@ -47,6 +48,7 @@
         </style>
         <link rel="stylesheet" type="text/css" href="css/one_oak_grid.css">
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
     </head>
     <body>
@@ -197,8 +199,6 @@
                             </div>      
                             <div id="portfolio" class="hidden">
 
-                                <!-- js slideshow here -->
-
                             </div>     
                             <div id="tenders" class="hidden">
                                 <h2>TENDERS</h2>
@@ -225,9 +225,25 @@
                     </div>
                 </div>
 
-                <div class="grid_11 alpha omega" id="portfolio_parent" >
-                    <div class="portfolio" id="portfolio_panel" style="display: none;">
+                <div class="grid_11 alpha omega" id="portfolio_parent" style="text-align: center; width: inherit;">
+                    <div class="portfolio" id="portfolio_panel" style="display: none;  width: inherit;">
                         
+                        <div class="fluid_container">
+                            <!-- js slideshow here -->
+                            <div class="camera_wrap camera_black_skin" id="camera_wrap">
+                                <div data-thumb="img/slides/thumbs/bridge.jpg" data-src="img/slides/bridge.jpg">
+                                    <div class="camera_caption fadeFromBottom">
+                                        Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+                                    </div>
+                                </div>
+                                <div data-thumb="img/slides/thumbs/leaf.jpg" data-src="img/slides/leaf.jpg">
+                                    <div class="camera_caption fadeFromBottom">
+                                        It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+                                    </div>
+                                </div>
+                            </div><!-- #camera_wrap_2 -->
+                        </div>
+
                     </div>
                 </div>
 
@@ -257,5 +273,6 @@
         <!-- end .container_16 -->
         <script type="text/javascript" src="js/shared.js"></script>
         <script type="text/javascript" src="js/oneoak.js"></script>
+        <script type="text/javascript" src="js/camera.min.js"></script>
     </body>
 </html>
