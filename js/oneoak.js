@@ -6,84 +6,13 @@
 
 var portfolioInitialized = false;
 
-$('.btn').click(function(event){
-    event.preventDefault();
+var dimBackground = function(that){
+    $('.img-background:visible').animate({'opacity': 0.15}, {'duration': 400});
+}
 
-    if($(".panel").is(':animated') != true){
-
-        var that = this;
-
-        // Panel, nor portfolio_panel are not visible
-        if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
-
-            adjustIfConMgmt(that);
-
-            if (that.id === 'portfolio'){ // But portfolio is clicked first
-                toggleButton(that);
-                $('#top_spacer').hide();
-                $('#small_panel').hide();
-                $('#portfolio_panel').toggle('fold');
-                initializePortfolio(that);
-            }
-            else { // Another btn is clicked
-                toggleButton(that);
-                $('#top_spacer').show();
-                $('#small_panel').show();
-                switchPanel(that);
-                $('.panel').toggle('fold');
-            }            
-        }
-        else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none')
-        { // Panel is visible
-            if ($('.innerPanel #' + that.id).hasClass("visible")) {
-                allButtonsOff(that);
-
-                $('.panel').toggle('fold');
-
-                return;
-            }
-
-            if (that.id === 'portfolio'){
-                toggleButton(that);
-                $('.panel').toggle({effect: 'fold', complete: function(){
-                    switchPanel(that);
-                    $('#top_spacer').hide();
-                    $('#small_panel').hide();
-                    $('#portfolio_panel').toggle('fold');
-                    initializePortfolio(that);
-                }});
-            }
-            else {
-                toggleButton(that);
-                $('.panel').toggle({effect: 'fold', complete: function(){ // fold
-                    switchPanel(that);
-                    adjustIfConMgmt(that);
-                    $('.panel').toggle('fold'); // unfold
-                }});
-            }
-        }       
-        // Portfolio is visible
-        else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
-            
-            if (that.id === 'portfolio') {
-                allButtonsOff(that);
-
-                $('#portfolio_panel').toggle('fold');
-
-                return;
-            }
-
-            toggleButton(that);
-
-            $('#portfolio_panel').toggle({'effect': 'fold', 'complete': function(){
-                switchPanel(that);
-                $('#top_spacer').show();
-                $('#small_panel').show();
-                $('.panel').toggle('fold');
-            }});
-        } 
-    }
-});
+var undimBackground = function(that){
+    $('.img-background:visible').animate({'opacity': 1}, {'duration': 400});
+}
 
 var initializePortfolio = function(that){
 
@@ -132,10 +61,96 @@ var allButtonsOff = function(that){
     $('.circle-btn').children('img').attr('src', 'img/plus.png');
 }
 
+$('.btn').click(function(event){
+    event.preventDefault();
+
+    if($(".panel").is(':animated') != true){
+
+        var that = this;
+
+        // Panel, nor portfolio_panel are not visible
+        if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
+
+            adjustIfConMgmt(that);
+
+            if (that.id === 'portfolio'){ // But portfolio is clicked first
+                toggleButton(that);
+                $('#top_spacer').hide();
+                $('#small_panel').hide();
+                $('#portfolio_panel').toggle('fold');
+                initializePortfolio(that);
+
+                dimBackground();
+            }
+            else { // Another btn is clicked
+                toggleButton(that);
+                $('#top_spacer').show();
+                $('#small_panel').show();
+                switchPanel(that);
+                $('.panel').toggle('fold');
+            }            
+        }
+        else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none')
+        { // Panel is visible
+            if ($('.innerPanel #' + that.id).hasClass("visible")) {
+                allButtonsOff(that);
+
+                $('.panel').toggle('fold');
+
+                return;
+            }
+
+            if (that.id === 'portfolio'){
+                toggleButton(that);
+                dimBackground();
+                $('.panel').toggle({effect: 'fold', complete: function(){
+                    switchPanel(that);
+                    $('#top_spacer').hide();
+                    $('#small_panel').hide();
+                    $('#portfolio_panel').toggle('fold');
+                    initializePortfolio(that);
+                }});
+            }
+            else {
+                toggleButton(that);
+                $('.panel').toggle({effect: 'fold', complete: function(){ // fold
+                    switchPanel(that);
+                    adjustIfConMgmt(that);
+                    $('.panel').toggle('fold'); // unfold
+                }});
+            }
+        }       
+        // Portfolio is visible
+        else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
+            
+            if (that.id === 'portfolio') {
+                allButtonsOff(that);
+
+                $('#portfolio_panel').toggle('fold');
+                undimBackground();
+
+                return;
+            }
+
+            toggleButton(that);
+
+            undimBackground();
+            $('#portfolio_panel').toggle({'effect': 'fold', 'complete': function(){
+                switchPanel(that);
+                $('#top_spacer').show();
+                $('#small_panel').show();
+                $('.panel').toggle('fold');
+            }});
+        } 
+    }
+});
+
 $('.nav-btn').click(function(event){
     event.preventDefault();
 
     if($(".sidebar-inner").is(':animated') != true){
+
+        undimBackground();
 
         var sidebar_target = $(this).data('sidebarTarget');
         
@@ -144,15 +159,19 @@ $('.nav-btn').click(function(event){
         switch(sidebar_target)
         {
         case '#sidebar-Vision':
+          if ($('#sidebar-Vision').css('display') != 'none') return;
           backgroundToShow = '#background1';
           break;
         case '#sidebar-Services':
+          if ($('#sidebar-Services').css('display') != 'none') return;
           backgroundToShow = '#background2';
           break;
         case '#sidebar-Work':
+          if ($('#sidebar-Work').css('display') != 'none') return;
           backgroundToShow = '#background3';
           break;
         case '#sidebar-Contact':
+          if ($('#sidebar-Contact').css('display') != 'none') return;
           backgroundToShow = '#background4';
           break;
         default:
