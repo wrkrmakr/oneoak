@@ -127,6 +127,8 @@ a:hover{
 	max-width: 1000px;
 	width: 90%;
 	height: 400px;
+	padding-left: 33px;
+	padding-top: 9px;
 }
 
 .index_panel{

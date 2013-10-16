@@ -95,7 +95,8 @@ var initializePortfolio = function(that){
             thumbnails: true,
             fx: 'simpleFade',
             playPause: false,
-            autoAdvance: false
+            autoAdvance: false,
+            alignment: 'right'
         });
     }
 
