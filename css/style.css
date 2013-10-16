@@ -123,6 +123,15 @@ a:hover{
 	font-family: 'Univers-Regular', Trebuchet, sans-serif;
 }
 
+.fluid_container {
+	margin: 0 0;
+	max-width: 1000px;
+	width: 90%;
+	height: 400px;
+	padding-left: 33px;
+	padding-top: 9px;
+}
+
 .index_panel{
 	background-color:rgba(241, 242, 242, 0.6);
 	text-align:center;
@@ -295,6 +304,11 @@ a:hover{
 .portfolio {
 	height: 490px;
 	background-color: rgba(100, 100, 100, 0.5);
+	text-align: center;
+}
+
+#portfolio_panel{
+	text-align: center;
 }
 
 /*.sidebar-full {
