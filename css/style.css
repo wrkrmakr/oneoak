@@ -110,6 +110,18 @@ a:hover{
 	background-image:url(../img/oneoak_2.jpg);
 }
 
+#loading {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 70px;
+	height: 20px;
+	background-color: #222;
+	color: white;
+	text-align: center;
+	font-family: 'Univers-Regular', Trebuchet, sans-serif;
+}
+
 .index_panel{
 	background-color:rgba(241, 242, 242, 0.6);
 	text-align:center;
