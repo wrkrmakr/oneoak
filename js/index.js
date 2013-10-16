@@ -6,7 +6,12 @@ $( document ).ready(function() {
 		'easing':'easeOutCubic'
 	});
 
+	$(backgrounds).preload();
+
+	$('#loading').hide();
+
 	var randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	$('.img-background').css('background-image', 'url(' + imlocation + backgrounds[randomIndex] + ')');
+	$('.img-background').css('background-image', 'url(' + backgrounds[randomIndex] + ')');
+
 });
