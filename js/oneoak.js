@@ -236,5 +236,17 @@ $(function () {
     $('#' + 'sidebar-' + hash).css('marginBottom', -520)
     $('#' + 'sidebar-' + hash).stop(true).animate({ 'marginBottom': 0 }, { queue: false, duration: 400});
     
-    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');    
+    $('#nav-btn-' + hash).addClass('nav-btn-active').removeClass('nav-btn-inactive');
+
+    // Use left and right buttons for portfolio navigation
+    $("body").keydown(function(e) {
+      if($('#portfolio_panel').css('display') != 'none') {
+          if(e.keyCode == 37) { // left
+            $('.camera_prev').trigger('click');
+          }
+          else if(e.keyCode == 39) { // right
+            $('.camera_next').trigger('click');
+          }
+      }
+    });
 });
