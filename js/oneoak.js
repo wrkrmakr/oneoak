@@ -194,7 +194,7 @@ $('.nav-btn').click(function(event){
                 $(sidebar_target).show();
                 $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
                     if (backgroundShouldChange === true){
-                        $('.img-background').fadeOut(1000);
+                        $('.img-background:visible').fadeOut(1000);
                         $(backgroundToShow).fadeIn(1000);
                         backgroundShouldChange = false;
                     } 
@@ -209,7 +209,7 @@ $('.nav-btn').click(function(event){
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
                         if (backgroundShouldChange === true){
-                            $('.img-background').fadeOut(1000);
+                            $('.img-background:visible').fadeOut(1000);
                             $(backgroundToShow).fadeIn(1000);
                             backgroundShouldChange = false;
                         } 
@@ -225,11 +225,10 @@ $('.nav-btn').click(function(event){
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
                         if (backgroundShouldChange === true){
-                            $('.img-background').fadeOut(1000);
+                            $('.img-background:visible').fadeOut(1000);
                             $(backgroundToShow).fadeIn(1000);
                             backgroundShouldChange = false;
-                        }                     
-                        
+                        }
                     } });                    
                 }});
             }});
