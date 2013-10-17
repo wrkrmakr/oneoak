@@ -154,7 +154,7 @@ a:hover{
 }
 
 .panel {
-	background-color:rgba(241, 242, 242, 0.6);
+	background-color:rgba(241, 242, 242, 0.8);
 	text-align:left;
 	padding: 40px 20px 40px;
 	z-index: 1000;
@@ -285,7 +285,7 @@ a:hover{
 }
 
 .sidebar-inner {
-	background-color:rgba(241, 242, 242, 0.7);
+	background-color:rgba(241, 242, 242, 0.8);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
