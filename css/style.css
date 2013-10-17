@@ -11,7 +11,7 @@ body{
 	height: 580px;
 	right:0;
 	/*bottom:8%;*/
-	padding-top:8%;
+	padding-top:7%;
 	left:0;
 }
 
@@ -239,9 +239,9 @@ a:hover{
 	position: relative;
 }
 
-/*.sidebar{*/
-	/*height:496px;*/
-/*}*/
+/*.sidebar{
+	position:absolute;
+}*/
 
 
 .sidebar h2 {	
@@ -387,9 +387,6 @@ a:hover{
 }
 @media (max-width:360px) and (orientation:portrait) {
 	.main-box {
-		position:relative;
-		height:100%;
-		top:10%;
-		bottom:20%;
+		padding-top:50%;
 	}
 }
