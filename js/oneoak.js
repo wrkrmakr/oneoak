@@ -7,6 +7,10 @@
 var portfolioInitialized = false;
 var backgroundShouldChange = false;
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    jQuery.fx.off = true;
+}
+
 var dimBackground = function(that){
     $('.img-background:visible').animate({'opacity': 0.15}, {'duration': 400});
 }
@@ -26,6 +30,7 @@ var initializePortfolio = function(that){
             fx: 'simpleFade',
             playPause: false,
             autoAdvance: false,
+            mobileAutoAdvance: false,
             alignment: 'right'
         });
     }
