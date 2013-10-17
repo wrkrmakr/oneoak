@@ -5,6 +5,7 @@
 // http://www.pixedelic.com/plugins/camera/
 
 var portfolioInitialized = false;
+var backgroundShouldChange = false;
 
 var dimBackground = function(that){
     $('.img-background:visible').animate({'opacity': 0.15}, {'duration': 400});
@@ -150,6 +151,8 @@ $('.nav-btn').click(function(event){
 
     if($(".sidebar-inner").is(':animated') != true){
 
+        backgroundShouldChange = true;
+
         undimBackground();
 
         var sidebar_target = $(this).data('sidebarTarget');
@@ -178,9 +181,6 @@ $('.nav-btn').click(function(event){
           backgroundToShow = '#background1';
         }
 
-        $('.img-background').fadeOut(1000);
-        $(backgroundToShow).fadeIn(1000);
-
         $('div.label').addClass('inactive').removeClass('active');
         $('.circle-btn').children('img').attr('src', 'img/plus.png');
 
@@ -192,7 +192,13 @@ $('.nav-btn').click(function(event){
                 $('.sidebar-inner').hide();
 
                 $(sidebar_target).show();
-                $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
+                $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
+                    if (backgroundShouldChange === true){
+                        $('.img-background').fadeOut(1000);
+                        $(backgroundToShow).fadeIn(1000);
+                        backgroundShouldChange = false;
+                    } 
+                }});                
             }});
         }
         else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none'){
@@ -201,7 +207,13 @@ $('.nav-btn').click(function(event){
                     $('.sidebar-inner').hide();
 
                     $(sidebar_target).show();
-                    $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
+                    $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
+                        if (backgroundShouldChange === true){
+                            $('.img-background').fadeOut(1000);
+                            $(backgroundToShow).fadeIn(1000);
+                            backgroundShouldChange = false;
+                        } 
+                    } });                    
                 }});
             }});
         }
@@ -211,7 +223,14 @@ $('.nav-btn').click(function(event){
                     $('.sidebar-inner').hide();
 
                     $(sidebar_target).show();
-                    $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400 });
+                    $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
+                        if (backgroundShouldChange === true){
+                            $('.img-background').fadeOut(1000);
+                            $(backgroundToShow).fadeIn(1000);
+                            backgroundShouldChange = false;
+                        }                     
+                        
+                    } });                    
                 }});
             }});
         }
