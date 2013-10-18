@@ -1,9 +1,7 @@
 var backgrounds = new Array();
-backgrounds[0] = 'img/construction.jpg';
-backgrounds[1] = 'img/oneoak_11.jpg';
-backgrounds[2] = 'img/oneoak_12.jpg';
-backgrounds[3] = 'img/oneoak3.jpg';
-backgrounds[4] = 'img/oneoak_7.jpg';
+backgrounds[0] = 'img/oneoak-1.jpg';
+backgrounds[1] = 'img/oneoak-3.jpg';
+backgrounds[2] = 'img/oneoak-9.jpg';
 
 var min = 0;
 var max = 4;
