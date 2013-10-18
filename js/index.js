@@ -5,12 +5,10 @@ $( document ).ready(function() {
 	$('.img-background').css('background-image', 'url(' + backgrounds[randomIndex] + ')');
 
 	$('.index_panel').hide();
-	$('.index_panel').slideDown({
+	$('.index_panel').delay(1200).slideDown({
 		'duration':800,
 		'easing':'easeOutCubic'
 	});
 
-	$(backgrounds).preload(function(){$('#loading').hide();});
-
-	
+	$(siteContentBackgrounds).preload(function(){$('#loading').hide();});	
 });

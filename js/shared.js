@@ -5,6 +5,9 @@ backgrounds[2] = 'img/oneoak_12.jpg';
 backgrounds[3] = 'img/oneoak3.jpg';
 backgrounds[4] = 'img/oneoak_7.jpg';
 
+var siteContentBackgrounds = new Array();
+siteContentBackgrounds[0] = 'img/construction.jpg';
+
 var min = 0;
 var max = 4;
 
