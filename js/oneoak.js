@@ -19,24 +19,24 @@ var undimBackground = function(that){
     $('.img-background:visible').animate({'opacity': 1}, {'duration': 400});
 }
 
-var initializePortfolio = function(that){
+// Note that on mobile, the portfolio would stack the thumbnails below the main image
+// var initializePortfolio = function(that){
 
-    if (portfolioInitialized === false){
-        $('#camera_wrap').camera({
-            height: '380px',
-            loader: 'bar',
-            pagination: false,
-            thumbnails: true,
-            fx: 'simpleFade',
-            playPause: false,
-            autoAdvance: false,
-            mobileAutoAdvance: false,
-            alignment: 'right'
-        });
-    }
-
-    portfolioInitialized = true;
-}
+//     if (portfolioInitialized === false){
+//         $('#camera_wrap').camera({
+//             height: '380px',
+//             loader: 'bar',
+//             pagination: false,
+//             thumbnails: true,
+//             fx: 'simpleFade',
+//             playPause: false,
+//             autoAdvance: false,
+//             mobileAutoAdvance: false,
+//             alignment: 'right'
+//         });
+//     }
+//     portfolioInitialized = true;
+// }
 
 var adjustIfConMgmt = function(that){
     if (that.id === 'con_mgmt'){
@@ -79,22 +79,22 @@ $('.btn').click(function(event){
 
             adjustIfConMgmt(that);
 
-            if (that.id === 'portfolio'){ // But portfolio is clicked first
-                toggleButton(that);
-                $('#top_spacer').hide();
-                $('#small_panel').hide();
-                $('#portfolio_panel').toggle('fold');
-                initializePortfolio(that);
+            // if (that.id === 'portfolio'){ // But portfolio is clicked first
+            //     toggleButton(that);
+            //     $('#top_spacer').hide();
+            //     $('#small_panel').hide();
+            //     $('#portfolio_panel').toggle('fold');
+            //     initializePortfolio(that);
 
-                dimBackground();
-            }
-            else { // Another btn is clicked
+            //     dimBackground();
+            // }
+            // else { // Another btn is clicked
                 toggleButton(that);
                 $('#top_spacer').show();
                 $('#small_panel').show();
                 switchPanel(that);
                 $('.panel').toggle('fold');
-            }            
+            // }            
         }
         else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none')
         { // Panel is visible
@@ -106,37 +106,37 @@ $('.btn').click(function(event){
                 return;
             }
 
-            if (that.id === 'portfolio'){
-                toggleButton(that);
-                dimBackground();
-                $('.panel').toggle({effect: 'fold', complete: function(){
-                    switchPanel(that);
-                    $('#top_spacer').hide();
-                    $('#small_panel').hide();
-                    $('#portfolio_panel').toggle('fold');
-                    initializePortfolio(that);
-                }});
-            }
-            else {
+            // if (that.id === 'portfolio'){
+            //     toggleButton(that);
+            //     dimBackground();
+            //     $('.panel').toggle({effect: 'fold', complete: function(){
+            //         switchPanel(that);
+            //         $('#top_spacer').hide();
+            //         $('#small_panel').hide();
+            //         $('#portfolio_panel').toggle('fold');
+            //         initializePortfolio(that);
+            //     }});
+            // }
+            // else {
                 toggleButton(that);
                 $('.panel').toggle({effect: 'fold', complete: function(){ // fold
                     switchPanel(that);
                     adjustIfConMgmt(that);
                     $('.panel').toggle('fold'); // unfold
                 }});
-            }
+            // }
         }       
         // Portfolio is visible
         else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
             
-            if (that.id === 'portfolio') {
-                allButtonsOff(that);
+            // if (that.id === 'portfolio') {
+            //     allButtonsOff(that);
 
-                $('#portfolio_panel').toggle('fold');
-                undimBackground();
+            //     $('#portfolio_panel').toggle('fold');
+            //     undimBackground();
 
-                return;
-            }
+            //     return;
+            // }
 
             toggleButton(that);
 
