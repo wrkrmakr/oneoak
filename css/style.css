@@ -98,19 +98,19 @@ a:hover{
 }
 
 #background1{
-	background-image:url(../img/construction.jpg);
+	background-image:url(../img/oneoak-1.jpg);
 }
 
 #background2{
-	background-image:url(../img/services-test2.jpg);
+	background-image:url(../img/oneoak-2.jpg);
 }
 
 #background3{
-	background-image:url(../img/testing-work.jpg);
+	background-image:url(../img/oneoak-5.jpg);
 }
 
 #background4{
-	background-image:url(../img/oneoak_7.jpg);
+	background-image:url(../img/oneoak-6.jpg);
 }
 
 #loading {
@@ -329,7 +329,7 @@ a:hover{
 #contact_info {
 	position:relative;
 	height:80px;
-	margin-top:175px;
+	margin-top:203px;
 	padding-left:20px;
 	float:left;
 	width: 140px;
@@ -343,8 +343,8 @@ a:hover{
 }
 #contact_info p{
 	font-family:"Univers-Light", Trebuchet, sans-serif;
-	font-size:14px;	
-	margin:0;
+	font-size:13px;	
+	margin:2px 0px;
 }
 .right_content{
 	height:inherit;
