@@ -140,7 +140,7 @@ $('.btn').click(function(event){
 
             toggleButton(that);
 
-            undimBackground();
+            // undimBackground();
             $('#portfolio_panel').toggle({'effect': 'fold', 'complete': function(){
                 switchPanel(that);
                 $('#top_spacer').show();
@@ -158,7 +158,7 @@ $('.nav-btn').click(function(event){
 
         backgroundShouldChange = true;
 
-        undimBackground();
+        // undimBackground();
 
         var sidebar_target = $(this).data('sidebarTarget');
         
@@ -193,47 +193,68 @@ $('.nav-btn').click(function(event){
         $(this).addClass('nav-btn-active').removeClass('nav-btn-inactive');
         
         if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
+            if (backgroundShouldChange === true){
+                $('.img-background:visible').fadeOut(1000);
+                $(backgroundToShow).fadeIn(1000);
+                backgroundShouldChange = false;
+            }
+            
             $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
                 $('.sidebar-inner').hide();
 
+
                 $(sidebar_target).show();
                 $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
-                    if (backgroundShouldChange === true){
-                        $('.img-background:visible').fadeOut(1000);
-                        $(backgroundToShow).fadeIn(1000);
-                        backgroundShouldChange = false;
-                    } 
+                    // if (backgroundShouldChange === true){
+                        // $('.img-background:visible').fadeOut(1000);
+                        // $(backgroundToShow).fadeIn(1000);
+                        // backgroundShouldChange = false;
+                    // } 
                 }});                
             }});
         }
         else if ($('.panel').css('display') != 'none' && $('#portfolio_panel').css('display') === 'none'){
+            if (backgroundShouldChange === true){
+                $('.img-background:visible').fadeOut(1000);
+                $(backgroundToShow).fadeIn(1000);
+                backgroundShouldChange = false;
+            } 
+
             $('.panel').toggle({effect: 'fold', complete: function(){
                 $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
                     $('.sidebar-inner').hide();
 
+
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
-                        if (backgroundShouldChange === true){
-                            $('.img-background:visible').fadeOut(1000);
-                            $(backgroundToShow).fadeIn(1000);
-                            backgroundShouldChange = false;
-                        } 
+                        // if (backgroundShouldChange === true){
+                            // $('.img-background:visible').fadeOut(1000);
+                            // $(backgroundToShow).fadeIn(1000);
+                            // backgroundShouldChange = false;
+                        // } 
                     } });                    
                 }});
             }});
         }
         else if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') != 'none'){
+            if (backgroundShouldChange === true){
+                $('.img-background:visible').fadeOut(1000);
+                $(backgroundToShow).fadeIn(1000);
+                backgroundShouldChange = false;
+            }
+
             $('#portfolio_panel').toggle({effect: 'fold', complete: function(){
                 $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
                     $('.sidebar-inner').hide();
 
+
                     $(sidebar_target).show();
                     $(sidebar_target).animate({ 'marginBottom': 0 }, { queue: false, duration: 400, complete: function(){
-                        if (backgroundShouldChange === true){
-                            $('.img-background:visible').fadeOut(1000);
-                            $(backgroundToShow).fadeIn(1000);
-                            backgroundShouldChange = false;
-                        }
+                        // if (backgroundShouldChange === true){
+                        //     $('.img-background:visible').fadeOut(1000);
+                        //     $(backgroundToShow).fadeIn(1000);
+                        //     backgroundShouldChange = false;
+                        // }
                     } });                    
                 }});
             }});
