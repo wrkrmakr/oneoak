@@ -302,8 +302,11 @@ $('#index_btn').click(function(event){
 $(function () {
     var hash=location.hash.replace('#', '');
 
-    if (hash != 'Vision' && hash != 'Services' && hash != 'Portfolio' && hash != 'Contact'){
+    if (hash != 'Vision' || hash != 'Services' || hash != 'Portfolio' || hash != 'Contact'){
         // hash = 'Vision';
+        $('#small_panel').show();
+        $('#index_panel').hide();
+        $("#index_logo").attr('src', 'img/logo-middlepages.png');
     }
 
     var backgroundToShow = '';
