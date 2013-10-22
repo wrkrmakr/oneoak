@@ -38,8 +38,9 @@ var undimBackground = function(that){
 //     portfolioInitialized = true;
 // }
 
-var adjustIfConMgmt = function(that){
-    if (that.id === 'con_mgmt'){
+var adjustIfTaller = function(that){
+    if (that.id === 'grn_bld' || that.id === 'vision' || that.id === 'rahul' || that.id === 'pre_con' || 
+        that.id === 'gen_con'){ 
         $(".panel").css('height', 280);
     }
     else {
@@ -77,7 +78,7 @@ $('.btn').click(function(event){
         // Panel, nor portfolio_panel are not visible
         if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
 
-            adjustIfConMgmt(that);
+            adjustIfTaller(that);
 
             // if (that.id === 'portfolio'){ // But portfolio is clicked first
             //     toggleButton(that);
@@ -121,7 +122,7 @@ $('.btn').click(function(event){
                 toggleButton(that);
                 $('.panel').toggle({effect: 'fold', complete: function(){ // fold
                     switchPanel(that);
-                    adjustIfConMgmt(that);
+                    adjustIfTaller(that);
                     $('.panel').toggle('fold'); // unfold
                 }});
             // }
