@@ -75,6 +75,8 @@ $('.btn').click(function(event){
 
         var that = this;
 
+        $('#small_panel').show();
+
         // Panel, nor portfolio_panel are not visible
         if ($('.panel').css('display') === 'none' && $('#portfolio_panel').css('display') === 'none'){
 
@@ -155,11 +157,19 @@ $('.btn').click(function(event){
 $('.nav-btn').click(function(event){
     event.preventDefault();
 
+    $("#index_logo").attr('src', 'img/logo-middlepages.png');
+
     if($(".sidebar-inner").is(':animated') != true){
 
         backgroundShouldChange = true;
 
         // undimBackground();
+
+        if ($('#index_panel').css('display') != 'none'){
+            $('#index_panel').slideUp( "slow", function() {
+              // Animation complete.
+            });
+        }
 
         var sidebar_target = $(this).data('sidebarTarget');
         
@@ -264,12 +274,36 @@ $('.nav-btn').click(function(event){
     }
 });
 
+$('#index_btn').click(function(event){
+    event.preventDefault();
+
+    if ($('#index_panel').css('display') === 'none'){
+
+        if($("#sidebar-inner").is(':animated') != true && $(".panel").is(':animated') != true){
+
+        $("#index_logo").attr('src', 'img/logo-home.png');
+
+        
+            $('.nav-btn').addClass('nav-btn-inactive').removeClass('nav-btn-active');
+
+            $('.panel').toggle({effect: 'fold', complete: function(){
+                $('.sidebar-inner').animate({ 'marginBottom': -520 }, { queue: false, duration: 400, complete: function(){
+                    $('.sidebar-inner').hide();
+                    $('#small_panel').hide();
+
+                    $('#index_panel').slideDown( "slow");
+                }});
+            }});
+        }
+    }
+});
+
 
 $(function () {
     var hash=location.hash.replace('#', '');
 
     if (hash != 'Vision' && hash != 'Services' && hash != 'Portfolio' && hash != 'Contact'){
-        hash = 'Vision';
+        // hash = 'Vision';
     }
 
     var backgroundToShow = '';

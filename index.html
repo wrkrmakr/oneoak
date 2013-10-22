@@ -2,105 +2,297 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>ONE OAK</title>
-            <!-- Meta Information -->    
+        <title>ONE OAK | Construction</title>
+        <!-- Meta Information -->    
         <meta charset="UTF-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
         <meta name="keywords" content="Toronto, construction, vision, design build, quality, contracting, standards, services, renovation, interiors, offices, commercial, Ontario, GTA, environmental">
         <meta name="description" content="One Oak Inc. is a full-service construction firm capable of delivering and executing renovations, interior fit-ups and new builds in the residential, commercial, retail and institutional sectors of the industry.">
         <meta name="author" content="ONMEDIA">      
             
-            <link rel="stylesheet" type="text/css" href="css/style.css"/>
-            <script type="text/javascript" src="js/jquery.js"></script>
-            <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-            <script type="text/javascript" src="js/jquery-ui.js"></script>
-            <style>
-                @font-face {
-                    font-family: "Univers-Light";
-                    src:url(fonts/UniversLTStd-Light.otf) format('opentype');            
-                }                       
-                @font-face {
-                    font-family: "Univers-Regular";
-                    src:url(fonts/UniversLTStd.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Univers-Bold";
-                    src:url(fonts/UniversLTStd-Bold.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Novecento-Light";
-                    src:url(fonts/Novecentowide-Light.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Novecento-Book";
-                    src:url(fonts/Novecentowide-Book.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Novecento-Normal";
-                    src:url(fonts/Novecentowide-Normal.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Novecento-DemBold";
-                    src:url(fonts/Novecentowide-DemiBold.otf) format('opentype');
-                }
-                @font-face {
-                    font-family: "Novecento-Bold";
-                    src:url(fonts/Novecentowide-Bold.otf) format('opentype');
-                }
-            </style>
-            <link rel="stylesheet" type="text/css" href="css/one_oak_grid.css">
-    </head>    
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/camera.css"/>
+        <style>
+            @font-face {
+                font-family: "Univers-Light";
+                src:url(fonts/UniversLTStd-Light.otf) format('opentype');            
+            }                       
+            @font-face {
+                font-family: "Univers-Regular";
+                src:url(fonts/UniversLTStd.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Univers-Bold";
+                src:url(fonts/UniversLTStd-Bold.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Novecento-Light";
+                src:url(fonts/Novecentowide-Light.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Novecento-Book";
+                src:url(fonts/Novecentowide-Book.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Novecento-Normal";
+                src:url(fonts/Novecentowide-Normal.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Novecento-DemBold";
+                src:url(fonts/Novecentowide-DemiBold.otf) format('opentype');
+            }
+            @font-face {
+                font-family: "Novecento-Bold";
+                src:url(fonts/Novecentowide-Bold.otf) format('opentype');
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/one_oak_grid.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+    </head>
     <body>
-        <div class="img-background"></div>
-
-        <div id="loading">
-            Loading
-        </div>
-
+        <div class="img-background" id="background1" style="display: none;"></div>
+        <div class="img-background" id="background2" style="display: none;"></div>
+        <div class="img-background" id="background3" style="display: none;"></div>
+        <div class="img-background" id="background4" style="display: none;"></div>
         <div class="container_16 main-box">
-            <div class="grid_14 prefix_1">
-                <div class="grid_14 top_index_spacer"></div>
-                <div class="grid_8 prefix_3 body alpha" style="height:303px;">
-                    <div class="index_panel">
-                        <div class="center-image">
-                          <img src="img/logo-main.png"/>
+            <div class="grid_3 prefix_1" style="height: inherit;">
+
+                <div class="sidebar sidebar-parent">
+
+                    <div class="sidebar-inner" id="sidebar-Vision" style="display:none;">
+                        <div class="title">
+                            <h1>VISION</h1>
                         </div>
-                        <div>
-                          <p><span class="bold">One Oak Inc.</span> is a full-service construction firm capable of delivering and executing renovations, interior fit-ups and new builds in the residential, commercial, retail and institutional sectors of the industry.</p>
+                        <div class="grid_3 alpha omega btn" id="vision">
+                            <div class="label inactive">VISION</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>     
+                        <div class="grid_3 alpha omega btn" id="standards">
+                            <div class="label inactive">STANDARDS</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="safety">
+                            <div class="label inactive">SAFETY</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>            
+                    </div>
+                    <div class="sidebar-inner" id="sidebar-Services" style="display:none;">
+                        <div class="title">
+                            <h1>SERVICES</h1>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="pre_con">
+                            <div class="label inactive">PRE-<br />CONSTRUCTION SERVICES</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>     
+                        <div class="grid_3 alpha omega btn" id="con_mgmt">
+                            <div class="label inactive">CONSTRUCTION MANAGEMENT</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="grn_bld">
+                            <div class="label inactive">GREEN BUILDING TECHNOLOGIES</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>             
+                        <div class="grid_3 alpha omega btn" id="gen_con">
+                            <div class="label inactive">GENERAL CONTRACTING</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>  
+                        <div class="grid_3 alpha omega btn" id="des_bld">
+                            <div class="label inactive">DESIGN-BUILD</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div> 
+                    </div>   
+                    <div class="sidebar-inner" id="sidebar-Portfolio" style="display:none;">
+                        <div class="title">
+                            <h1>PORTFOLIO</h1>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="past">
+                            <div class="label inactive">PAST</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>     
+                        <div class="grid_3 alpha omega btn" id="present">
+                            <div class="label inactive">PRESENT</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="future">
+                            <div class="label inactive">FUTURE</div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>       
+                    </div>
+                    <div class="sidebar-inner" id="sidebar-Contact" style="display:none;">
+                        <div class="title">
+                            <h1>CONTACT</h1>
+                        </div>
+                        <div class="grid_3 alpha omega btn" id="rahul">
+                            <div class="label inactive">RAHUL FARIA<br/><span style="color:#798276;font-size:11px;">DIRECTOR OF CONSTRUCTION</span></div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                            <div class="contact-btn"></div>
+                        </div>
+<!--                         <div class="grid_3 alpha omega" id="deryn">
+                            <div class="label inactive">DERYN ROBSON<br/><span style="color:#b2bcaf;font-size:11px;">BUSINESS DEVELOPMENT</span></div>
+                            <div class="circle-btn"><img width="22px" src="img/plus.png"/></div>
+                        </div>   -->
+                        <div class="grid_3 alpha omega">
+                            <div id="contact_info">
+                                <h2>ONE OAK INC.</h2>
+                                <p>t &nbsp;416 598 1-OAK (625)</p>
+                                <p>f &nbsp;416 597 6996</p>
+                                <p>e &nbsp;<a href="mailto:info@one-oak.ca">info@one-oak.ca</a></p>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+
+                <div class="bottom" style="height: 60px;">  
+                    <div class="nav-btn nav-btn-inactive" id="nav-btn-Vision" data-sidebar-target="#sidebar-Vision">
+                        VISION
+                    </div>
+                </div>
+                
+                <!-- left menu -->
+            </div>
+
+            <!-- right content -->
+            <div class="grid_11 right_content">
+                <div class="grid_10 prefix_1 top_spacer" id="top_spacer" style="display: block;"></div>
+                <div class="index_panel grid_7 alpha omega" id="index_panel">
+                    <div class="center-image">
+                      <img src="img/logo-main.png"/>
+                    </div>
+                    <br/>
+                    <div>
+                      <p><span class="bold">One Oak Inc.</span> is a full-service construction firm capable of delivering and executing renovations, interior fit-ups and new builds in the residential, commercial, retail and institutional sectors of the industry.</p>
+                    </div>
+                </div>
+                <div class="grid_10 prefix_1 body" id="small_panel" style="display: none;">
+                    
+                    <div class="panel">
+                        <div class="innerPanel">
+                            <div id="vision" class="hidden">
+                                <h2>VISION</h2>
+                                <p><span class="bold">One Oak Inc.</span> strives to maintain a quality, professional and collaborative environment.</p>
+                                <p>Every project undertaken by <span class="bold">One Oak</span> goes through precise quality control measures in order to ensure the highest calibre of products and efficient results.</p>
+                                <p>Managing renovations and new builds while maintaining delivery timelines and budget is paramount. We leverage our experience to bring residential, commercial, institutional or retail projects to fruition.</p>
+                                <p>The relationships with numerous architects, engineering firms, interior designers and specialized subcontractors that <span class="bold">One Oak</span> has cultivated within the industry allows us to uphold our vision.</p>
+                            </div>              
+                            <div id="standards" class="hidden">
+                                <h2>STANDARDS</h2>
+                                <p>At <span class="bold">One Oak,</span> we believe in delivering a quality product and service within the time and budget constraints of your project. Our qualified and professional staff ensures that every aspect of a project is performed to the highest level.</p>
+                                <p>Our Site Superintendents implement strict quality control measures for work performed on site, while Project Managers advise our clients on various short and long term goals.</p>
+                                <p>Every project run by <span class="bold">One Oak Inc.,</span> be it large or small, is given special emphasis to deliver a quality product on time.</p>
+                            </div>    
+                            <div id="safety" class="hidden">
+                                <h2>SAFETY</h2>
+                                <p><span class="bold">One Oak Inc.</span> is committed to maintaining and exceeding the Occupational Health &amp; Safety standards set out by the Provincial Government.</p>
+                                <p>These safety standards are achieved by providing representatives of <span class="bold">One Oak Inc.</span> with industry training, and through random on-site safety inspections.</p>
+                                <p>In addition, third party certified safety consultants carry out inspections to ensure that all safety rules and regulations are followed.</p>
+                            </div>  
+                            <div id="pre_con" class="hidden">
+                                <h2>PRE-CONSTRUCTION SERVICES</h2>
+                                <p>This is the first and most essential aspect of any prospective construction project. This phase gives the owner a clear idea of either an overall costing for the projected site or whether their initial budget for a project meets the actual industry standards.</p>
+                                <p><span class="bold">One Oak</span> provides the necessary consulting services needed for the budgeting stage by obtaining and analyzing costs from Architects / Interior Designers / Engineering fees, to estimating the actual construction costs, timelines, permit requirements and other deliverables.</p>
+                                <p><span class="bold">One Oak</span> provides Pre-Construction Services in the Commercial, Institutional, Retail and Residential sectors.</p>
+                            </div> 
+                            <div id="con_mgmt" class="hidden">
+                                <h2>CONSTRUCTION MANAGEMENT</h2>
+                                <p><span class="bold">Construction Management</span> is the overall planning, coordination and control of a project from start to finish.</p>
+                                <p><span class="bold">One Oak</span> maximizes the resource efficiency through the procurement of labour and materials while implementing the proper coordination and control of planning, design, estimating, contracting and construction.</p>
+                                <p><span class="bold">One Oak</span> provides Construction Management services in the Commercial, Institutional, Retail and Residential sectors.</p>
+                            </div> 
+                            <div id="grn_bld" class="hidden">
+                                <h2>GREEN BUILDING TECHNOLOGIES</h2>
+                                <p>For the past decade, a new emphasis has been placed on designing and implementing various systems to buildings in order to reduce the negative environmental impact. The Green Building Solutions are being implemented to new and existing buildings through services such as lighting and HVAC automation, addition of solar panels, changes to the exterior glass and blinds, and many more.<p>
+                                <p>These systems are not only beneficial for reducing the environmental impact, but also employ building controls to maximize energy efficiency and savings for optimized comfort and convenience.</p>
+                                <p>At <span class="bold">One Oak,</span> our team is able to consult, develop and implement custom building specifications to increase the daily operational savings, in the Commercial, Institutional, Retail and Residential sectors.</p>
+                            </div>     
+                            <div id="gen_con" class="hidden">
+                                <h2>GENERAL CONTRACTING</h2>
+                                <p>A general contractor is responsible for providing all of the material, labour, equipment and services necessary for the construction of the project. The general contractor hires specialized subcontractors to perform various aspects of the project.</p>
+                                <p>Responsibilities may include applying for building permits, securing the property, providing temporary utilities, managing personnel, providing site surveying and engineering, disposing and recycling of construction waste, monitoring schedules and cash flows, and maintaining accurate records.</p>
+                                <p><span class="bold">One Oak</span> provides General Contracting services in the Commercial, Institutional, Retail and Residential sectors.</p>
+                            </div> 
+                            <div id="des_bld" class="hidden">
+                                <h2>DESIGN-BUILD</h2>
+                                <p>It is a method to deliver a project in which the design and construction services are contracted to a one entity. A design-build project is used to minimize risks for the owner and to reduce the delivery schedule by overlapping the design phase and construction phase of a project.</p>
+                                <p>The design-build procurement route changes the traditional sequence of work. The consultants and builders work together to create multiple layouts and specifications to meet the owner requirements and budget.</p>
+                                <p><span class="bold">One Oak</span> provides Design-Build services in the Commercial, Institutional, Retail and Residential sectors.</p>
+                            </div>      
+                            <div id="past" class="hidden">
+                                <h2>PAST</h2>
+                                <p>We are currently developing an interactive portal where you will be able to download necessary documentation.  We appreciate your patience.  Please check back for updates.</p>
+                            </div>    
+                            <div id="present" class="hidden">
+                                <h2>PRESENT</h2>
+                                <p>We are currently developing an interactive portal where you will be able to download necessary documentation.  We appreciate your patience.  Please check back for updates.</p>
+                            </div>     
+                            <div id="future" class="hidden">
+                                <h2>FUTURE</h2>
+                                <p>We are currently developing an interactive portal where you will be able to download and submit necessary documentation.  We appreciate your patience.  Please check back for updates.</p>
+                            </div>    
+                            <div id="rahul" class="hidden">
+                                <h2>RAHUL FARIA</h2>
+                                <p>With over 11 years in the construction industry, Rahul Faria has built a reputation for his professionalism with delivering quality projects in collaboration with clients, consultants and subcontractors.</p>
+                                <p>Through his education in Civil Engineering at the University of Waterloo, Rahul launched his career by establishing a foundation in estimating projects as an Assistant Estimator with Bird Construction. He built over this foundation by gaining valuable on-site experience on key projects as a Site Superintendent, and eventually took over as the Chief Estimator and a Senior Project Manager with York Contracting Ltd.</p>
+                                <p><span class="bold">One Oak Inc.</span> is a culmination of Rahul’s experiences to bring a culture of quality, professionalism and collaboration. <span class="bold">One Oak,</span> or ‘One of a Kind’, rests on that philosophy to bring every commercial, retail, institutional and retail project to fruition.</p>
+                            </div>     
+<!--                             <div id="deryn" class="hidden">
+                                <h2>DERYN ROBSON</h2>
+                                <p>hidden</p>
+                            </div>   -->           
                         </div>
                     </div>
                 </div>
 
-                <div class="clear"></div>
-                <div class="button_bar index_spacer">
-                    <div class="right-nav-space grid_3 alpha">
-                        <a href="siteContent.html#Vision"><div class="nav-btn nav-btn-inactive">
-                            VISION
-                        </div></a>
+                <div class="grid_11 alpha omega" id="portfolio_parent">
+                    <div class="portfolio" id="portfolio_panel" style="display: none;">
+                        
+                        <div class="fluid_container">
+                            <!-- js slideshow here -->
+                            <div class="camera_wrap camera_black_skin" id="camera_wrap">
+                                <div data-thumb="img/slides/thumbs/bridge.jpg" data-src="img/slides/bridge.jpg">
+                                    <div class="camera_caption fadeFromBottom">
+                                        Subtitles for each photo go <em>here.</em>
+                                    </div>
+                                </div>
+                                <div data-thumb="img/slides/thumbs/leaf.jpg" data-src="img/slides/leaf.jpg">
+                                    <div class="camera_caption fadeFromBottom">
+                                        Custom messages can be inserted for each slide.
+                                    </div>
+                                </div>
+                            </div><!-- #camera_wrap_2 -->
+                        </div>
+
                     </div>
-                    <div class="right-nav-space grid_3">
-                        <a href="siteContent.html#Services"><div class="nav-btn nav-btn-inactive">
+                </div>
+
+<!--                 <div class="clear"></div> -->
+                <div class="button_bar prefix_1">
+                    <div class="right-nav-space grid_3 pull_1 alpha">
+                        <div class="nav-btn nav-btn-inactive" id="nav-btn-Services" data-sidebar-target="#sidebar-Services">
                             SERVICES
-                        </div></a>
+                        </div>
                     </div>
-                    <div class="grid_2 logo" style="margin-top:5px;">
-                        <a href="index.html"><img src="img/logo-home.png"/></a>
+                    <div class="grid_2 pull_1 logo">
+                        <a href="#" id="index_btn"><img id="index_logo" src="img/logo-home.png" draggable="false"/></a>
                     </div>
-                    <div class="right-nav-space grid_3">
-                        <a href="siteContent.html#Portfolio"><div class="nav-btn nav-btn-inactive">
+                    <div class="right-nav-space grid_3 pull_1">
+                        <div class="nav-btn nav-btn-inactive" id="nav-btn-Portfolio" data-sidebar-target="#sidebar-Portfolio">
                             PORTFOLIO
-                        </div></a>
+                        </div>
                     </div>
-                    <div class="right-nav-space grid_3 omega">
-                        <a href="siteContent.html#Contact"><div class="nav-btn nav-btn-inactive">
+                    <div class="right-nav-space grid_3 pull_1 omega">
+                        <div class="nav-btn nav-btn-inactive" id="nav-btn-Contact" data-sidebar-target="#sidebar-Contact">
                             CONTACT
-                        </div></a>
+                        </div>
                     </div>
                 </div> 
             </div>
         </div>
         <!-- end .container_16 -->
         <script type="text/javascript" src="js/shared.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/camera.min.js"></script>
+        <script type="text/javascript" src="js/oneoak.js"></script>
+        <!-- <script type="text/javascript" src="js/camera.min.js"></script> -->
     </body>
 </html>
